@@ -168,10 +168,7 @@ class MeasureActivity : AppCompatActivity(), Scene.OnUpdateListener {
         }
         val arrowColorInt = intent.getIntExtra(PARAM_ARROW_COLOR, -1)
         arrowColor = if (arrowColorInt == -1) {
-            val attributes = obtainStyledAttributes(intArrayOf(android.R.attr.colorAccent))
-            val argb = attributes.getColor(0, 0)
-            attributes.recycle()
-            argb
+            android.graphics.Color.argb(255, 209, 64, 0)
         } else arrowColorInt
         requestResult = intent.getBooleanExtra(PARAM_REQUEST_RESULT, false)
     }
@@ -523,8 +520,7 @@ class MeasureActivity : AppCompatActivity(), Scene.OnUpdateListener {
          *  is that precise. */
         const val PARAM_PRECISION_STEP = "display_precision"
 
-        /** Int. Color value of the measurement arrow. By default is the default accent color of
-         *  this app.
+        /** Int. Color value of the measurement arrow. By default is orange
          */
         const val PARAM_ARROW_COLOR = "arrow_color"
 
