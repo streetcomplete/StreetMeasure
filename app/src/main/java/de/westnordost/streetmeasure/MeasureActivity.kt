@@ -119,7 +119,7 @@ class MeasureActivity : AppCompatActivity(), Scene.OnUpdateListener {
         binding.directionButton.setOnClickListener { toggleDirection() }
         binding.unitButton.setOnClickListener { toggleUnit() }
 
-        binding.infoButton.setOnClickListener { TODO() }
+        binding.infoButton.setOnClickListener { InfoDialog(this).show() }
 
         if (savedInstanceState != null) {
             createArCoreSession.hasRequestedArCoreInstall = savedInstanceState.getBoolean(HAS_REQUESTED_AR_CORE_INSTALL)

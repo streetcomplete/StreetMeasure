@@ -93,10 +93,9 @@ tasks.register<UpdateAppTranslationsTask>("updateTranslations") {
         "no_camera_permission_warning_title",
         "no_camera_permission_warning",
         "no_camera_permission_toast",
+        "about_title_privacy_statement",
         "privacy_html_arcore",
-        "ar_measure_horizontal",
-        "ar_measure_vertical",
-        "ar_measure_meters",
-        "ar_measure_ft_in",
+        "measure_info_title",
+        "measure_info_html_description"
     )
 }

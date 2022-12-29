@@ -12,4 +12,9 @@
     <string name="ar_core_tracking_error_no_plane_hit">"Keep closer to the arrow but watch out for traffic!"</string>
     <string name="no_camera_permission_toast">"No camera permission"</string>
     <string name="ar_core_tracking_hint_tap_to_measure">"Tap screen to start measuring"</string>
+    <string name="about_title_privacy_statement">"Privacy statement"</string>
+    <string name="measure_info_title">"Achieving optimal precision"</string>
+    <string name="measure_info_html_description">"&lt;p&gt;ARCore sometimes (initially) presumes the ground to be a bit lower or higher than it actually is. This introduces error that gets larger the more you tilt your phone towards the horizon.&lt;/p&gt;
+&lt;p&gt;Set each the start- and endpoint while pointing the phone straight down (so that you see the white arrow from above) to completely avoid this for horizontal measurements.&lt;/p&gt;
+&lt;p&gt;For vertical measurements, check if the startpoint really sticks to the ground by moving around it: If it seems to move, it floats somewhere above or below it.&lt;/p&gt;"</string>    <string name="privacy_html_arcore">This application runs on &lt;a href="https://play.google.com/store/apps/details?id=com.google.ar.core"&gt;Google Play Services for AR&lt;/a&gt; (ARCore), which is provided by Google and governed by the &lt;a href="https://policies.google.com/privacy"&gt;Google Privacy Policy&lt;/a&gt;.</string>
 </resources>
