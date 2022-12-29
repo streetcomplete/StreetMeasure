@@ -64,7 +64,8 @@ class MeasureActivity : AppCompatActivity(), Scene.OnUpdateListener {
     private var cursorNode: AnchorNode? = null
 
     private var measureVertical: Boolean = false
-    private var displayUnit: MeasureDisplayUnit = MeasureDisplayUnitMeter(2)
+    private var displayUnit: MeasureDisplayUnit = MeasureDisplayUnitMeter(1)
+
     private var requestResult: Boolean = false
     private var arrowColor: Int = -1
 
@@ -104,11 +105,19 @@ class MeasureActivity : AppCompatActivity(), Scene.OnUpdateListener {
         }
 
         setContentView(binding.root)
+
+        binding.directionButton.isGone = requestResult
+        binding.unitButton.isGone = requestResult
+
+        updateDirectionButtonEnablement()
+        updateDirectionButtonImage()
+        updateUnitButtonImage()
+
         binding.startOverButton.setOnClickListener { clearMeasuring() }
         binding.acceptButton.setOnClickListener { returnMeasuringResult() }
 
-        binding.horizontalVerticalButton.setOnClickListener { TODO() }
-        binding.meterFootButton.setOnClickListener { TODO() }
+        binding.directionButton.setOnClickListener { toggleDirection() }
+        binding.unitButton.setOnClickListener { toggleUnit() }
 
         binding.infoButton.setOnClickListener { TODO() }
 
@@ -159,13 +168,13 @@ class MeasureActivity : AppCompatActivity(), Scene.OnUpdateListener {
 
     private fun readIntent() {
         measureVertical = intent.getBooleanExtra(PARAM_MEASURE_VERTICAL, measureVertical)
-        val displayUnitStr = intent.getStringExtra(PARAM_DISPLAY_UNIT)
-        val precisionStep = intent.getIntExtra(PARAM_PRECISION_STEP, 1)
-        displayUnit = when (displayUnitStr) {
-            DISPLAY_UNIT_METERS -> MeasureDisplayUnitMeter(precisionStep.coerceIn(1, 100))
-            DISPLAY_UNIT_FT_IN -> MeasureDisplayUnitFeetInch(precisionStep.coerceIn(1, 12))
-            else -> getDefaultDisplayUnit(precisionStep)
+        val isFeetInch = when (intent.getStringExtra(PARAM_DISPLAY_UNIT)) {
+            DISPLAY_UNIT_METERS -> false
+            DISPLAY_UNIT_FT_IN -> true
+            else -> resources.configuration.locales.get(0).country in countriesWhereFeetInchIsUsed
         }
+        val precisionStep = intent.getIntExtra(PARAM_PRECISION_STEP, 1)
+        displayUnit = createMeasureDisplayUnit(isFeetInch, precisionStep)
         val arrowColorInt = intent.getIntExtra(PARAM_ARROW_COLOR, -1)
         arrowColor = if (arrowColorInt == -1) {
             android.graphics.Color.argb(255, 209, 64, 0)
@@ -173,11 +182,47 @@ class MeasureActivity : AppCompatActivity(), Scene.OnUpdateListener {
         requestResult = intent.getBooleanExtra(PARAM_REQUEST_RESULT, false)
     }
 
-    private fun getDefaultDisplayUnit(precisionStep: Int) =
-        if (resources.configuration.locales.get(0).country in countriesWhereFeetInchIsUsed)
+    private fun createMeasureDisplayUnit(isFeetInch: Boolean, precisionStep: Int): MeasureDisplayUnit =
+        if (isFeetInch)
             MeasureDisplayUnitFeetInch(precisionStep.coerceIn(1, 12))
         else
             MeasureDisplayUnitMeter(precisionStep.coerceIn(1, 100))
+
+    /* ---------------------------------------- Buttons ----------------------------------------- */
+
+    private fun toggleDirection() {
+        measureVertical = !measureVertical
+        binding.directionButtonImage.animate()
+            .rotationBy(90f)
+            .setDuration(150)
+            .start()
+    }
+
+    private fun toggleUnit() {
+        binding.unitButtonImage.flip(150) {
+            displayUnit = when (displayUnit) {
+                is MeasureDisplayUnitFeetInch -> MeasureDisplayUnitMeter(1)
+                is MeasureDisplayUnitMeter -> MeasureDisplayUnitFeetInch(1)
+            }
+            updateMeasurementTextView()
+            updateUnitButtonImage()
+        }
+    }
+
+    private fun updateDirectionButtonEnablement() {
+        binding.directionButton.isEnabled = measureState != MeasureState.MEASURING
+    }
+
+    private fun updateDirectionButtonImage() {
+        binding.directionButtonImage.rotation = if (measureVertical) 90f else 0f
+    }
+
+    private fun updateUnitButtonImage() {
+        binding.unitButtonImage.setImageResource(when (displayUnit) {
+            is MeasureDisplayUnitFeetInch -> R.drawable.ic_foot_24
+            is MeasureDisplayUnitMeter ->    R.drawable.ic_meter_24
+        })
+    }
 
     /* --------------------------------- Scene.OnUpdateListener --------------------------------- */
 
@@ -330,6 +375,7 @@ class MeasureActivity : AppCompatActivity(), Scene.OnUpdateListener {
     private fun startMeasuring() {
         val anchor = cursorNode?.anchor ?: return
         measureState = MeasureState.MEASURING
+        updateDirectionButtonEnablement()
         binding.arSceneViewContainer.performHapticFeedback(VIRTUAL_KEY)
         firstNode = AnchorNode().apply {
             renderable = pointRenderable
@@ -353,16 +399,19 @@ class MeasureActivity : AppCompatActivity(), Scene.OnUpdateListener {
         binding.arSceneViewContainer.performHapticFeedback(VIRTUAL_KEY)
         if (requestResult) binding.acceptResultContainer.isGone = false
         measureState = MeasureState.DONE
+        updateDirectionButtonEnablement()
     }
 
     private fun continueMeasuring() {
         binding.arSceneViewContainer.performHapticFeedback(VIRTUAL_KEY)
         if (requestResult) binding.acceptResultContainer.isGone = true
         measureState = MeasureState.MEASURING
+        updateDirectionButtonEnablement()
     }
 
     private fun clearMeasuring() {
         measureState = MeasureState.READY
+        updateDirectionButtonEnablement()
         binding.arSceneViewContainer.performHapticFeedback(VIRTUAL_KEY)
         binding.measurementSpeechBubble.isInvisible = true
         binding.acceptResultContainer.isGone = true
@@ -452,12 +501,16 @@ class MeasureActivity : AppCompatActivity(), Scene.OnUpdateListener {
 
         val difference = Vector3.subtract(pos1, pos2)
         distance = difference.length()
-        binding.measurementTextView.text = displayUnit.format(distance)
+        updateMeasurementTextView()
 
         val line = getLineNode()
         line.worldPosition = Vector3.add(pos1, pos2).scaled(.5f)
         line.worldRotation = Quaternion.lookRotation(difference, up)
         line.localScale = Vector3(1f, 1f, distance)
+    }
+
+    private fun updateMeasurementTextView() {
+        binding.measurementTextView.text = displayUnit.format(distance)
     }
 
     private fun getCursorNode(): AnchorNode {
