@@ -76,7 +76,7 @@ class MeasureActivity : AppCompatActivity(), Scene.OnUpdateListener {
     private enum class MeasureState { READY, MEASURING, DONE }
     private var measureState: MeasureState = MeasureState.READY
 
-    private var distance: Float = 0f
+    private var distance: Double = 0.0
 
     // taken from https://github.com/streetcomplete/countrymetadata/blob/master/data/lengthUnits.yml
     // in December 2022 (maybe things change in later years, especially in those tiny island countries)
@@ -97,7 +97,7 @@ class MeasureActivity : AppCompatActivity(), Scene.OnUpdateListener {
             WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS
         )
         readIntent()
-        distance = 0f
+        distance = 0.0
 
         try {
             binding = ActivityMeasureBinding.inflate(layoutInflater)
@@ -426,7 +426,7 @@ class MeasureActivity : AppCompatActivity(), Scene.OnUpdateListener {
         binding.arSceneViewContainer.performHapticFeedback(VIRTUAL_KEY)
         binding.measurementSpeechBubble.isInvisible = true
         binding.acceptResultContainer.isGone = true
-        distance = 0f
+        distance = 0.0
         cursorNode?.isEnabled = true
         firstNode?.anchor?.detach()
         firstNode?.setParent(null)
@@ -511,13 +511,13 @@ class MeasureActivity : AppCompatActivity(), Scene.OnUpdateListener {
         if (!hasMeasurement) return
 
         val difference = Vector3.subtract(pos1, pos2)
-        distance = difference.length()
+        distance = difference.length().toDouble()
         updateMeasurementTextView()
 
         val line = getLineNode()
         line.worldPosition = Vector3.add(pos1, pos2).scaled(.5f)
         line.worldRotation = Quaternion.lookRotation(difference, up)
-        line.localScale = Vector3(1f, 1f, distance)
+        line.localScale = Vector3(1f, 1f, distance.toFloat())
     }
 
     private fun updateMeasurementTextView() {
@@ -595,7 +595,7 @@ class MeasureActivity : AppCompatActivity(), Scene.OnUpdateListener {
         /** The action to identify a result */
         const val RESULT_ACTION = "de.westnordost.streetmeasure.RESULT_ACTION"
 
-        /** The result as displayed to the user, set if display unit was meters. Float. */
+        /** The result as displayed to the user, set if display unit was meters. Double. */
         const val RESULT_MEASURE_METERS = "measure_result_meters"
 
         /** The result as displayed to the user, set if display unit was feet+inches. Int. */
