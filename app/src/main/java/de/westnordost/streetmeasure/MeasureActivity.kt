@@ -3,12 +3,14 @@ package de.westnordost.streetmeasure
 import android.content.Intent
 import android.os.Bundle
 import android.os.PersistableBundle
+import android.preference.PreferenceManager
 import android.util.Log
 import android.view.HapticFeedbackConstants.VIRTUAL_KEY
 import android.view.ViewGroup.LayoutParams.MATCH_PARENT
 import android.view.WindowManager
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.edit
 import androidx.core.view.isGone
 import androidx.core.view.isInvisible
 import androidx.lifecycle.lifecycleScope
@@ -53,6 +55,8 @@ class MeasureActivity : AppCompatActivity(), Scene.OnUpdateListener {
 
     private lateinit var binding: ActivityMeasureBinding
     private var arSceneView: ArSceneView? = null
+
+    private val prefs get() = PreferenceManager.getDefaultSharedPreferences(this)
 
     private var cursorRenderable: Renderable? = null
     private var pointRenderable: Renderable? = null
@@ -171,7 +175,10 @@ class MeasureActivity : AppCompatActivity(), Scene.OnUpdateListener {
         val isFeetInch = when (intent.getStringExtra(PARAM_DISPLAY_UNIT)) {
             DISPLAY_UNIT_METERS -> false
             DISPLAY_UNIT_FT_IN -> true
-            else -> resources.configuration.locales.get(0).country in countriesWhereFeetInchIsUsed
+            else -> prefs.getBoolean(
+                PREF_IS_FT_IN,
+                resources.configuration.locales.get(0).country in countriesWhereFeetInchIsUsed
+            )
         }
         val precisionStep = intent.getIntExtra(PARAM_PRECISION_STEP, 1)
         displayUnit = createMeasureDisplayUnit(isFeetInch, precisionStep)
@@ -203,6 +210,9 @@ class MeasureActivity : AppCompatActivity(), Scene.OnUpdateListener {
             displayUnit = when (displayUnit) {
                 is MeasureDisplayUnitFeetInch -> MeasureDisplayUnitMeter(1)
                 is MeasureDisplayUnitMeter -> MeasureDisplayUnitFeetInch(1)
+            }
+            prefs.edit {
+                putBoolean(PREF_IS_FT_IN, displayUnit is MeasureDisplayUnitFeetInch)
             }
             updateMeasurementTextView()
             updateUnitButtonImage()
@@ -542,6 +552,8 @@ class MeasureActivity : AppCompatActivity(), Scene.OnUpdateListener {
 
     companion object {
         private const val HAS_REQUESTED_AR_CORE_INSTALL = "has_requested_ar_core_install"
+
+        private const val PREF_IS_FT_IN = "pref_is_ft_in"
 
         /* --------------------------------- Intent Parameters ---------------------------------- */
 
