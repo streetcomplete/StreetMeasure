@@ -193,7 +193,7 @@ class MeasureActivity : AppCompatActivity(), Scene.OnUpdateListener {
     private fun toggleDirection() {
         measureVertical = !measureVertical
         binding.directionButtonImage.animate()
-            .rotationBy(90f)
+            .rotation(if (measureVertical) 90f else 0f)
             .setDuration(150)
             .start()
     }
@@ -207,6 +207,7 @@ class MeasureActivity : AppCompatActivity(), Scene.OnUpdateListener {
             updateMeasurementTextView()
             updateUnitButtonImage()
         }
+        binding.measurementTextView.flip(150)
     }
 
     private fun updateDirectionButtonEnablement() {

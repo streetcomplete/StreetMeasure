@@ -4,17 +4,17 @@ import android.view.View
 import android.view.animation.AccelerateInterpolator
 import android.view.animation.DecelerateInterpolator
 
-fun View.flip(duration: Long, block: (View) -> Unit) {
+fun View.flip(duration: Long, block: ((View) -> Unit)? = null) {
     animate()
-        .scaleX(0f)
+        .scaleY(0f)
         .setDuration(duration / 2)
-        .setInterpolator(DecelerateInterpolator())
+        .setInterpolator(AccelerateInterpolator())
         .withEndAction {
-            block(this)
+            block?.invoke(this)
             animate()
-                .scaleX(1f)
+                .scaleY(1f)
                 .setDuration(duration / 2)
-                .setInterpolator(AccelerateInterpolator())
+                .setInterpolator(DecelerateInterpolator())
                 .start()
         }
         .start()
