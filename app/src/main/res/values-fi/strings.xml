@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="no_camera_permission_warning_title">"Oikeudet kameraan"</string>
+    <string name="no_camera_permission_warning">"Oikeudet tarvitaan kuvien ottamiseen ja etäisyyksien mittaamiseen kameran avulla."</string>
+    <string name="ar_core_error_sdk_too_old">"Sovellusversio on vanha, päivitä sovellus."</string>
+    <string name="ar_core_tracking_error_bad_state">"Jokin meni pieleen. Kokeile käynnistää mittaus uudelleen."</string>
+    <string name="ar_core_tracking_error_insufficient_light">"Liian pimeää"</string>
+    <string name="ar_core_tracking_error_excessive_motion">"Liikaa liikettä"</string>
+    <string name="ar_core_tracking_error_insufficient_features">"Tässä ei ole tarpeeksi visuaalisia ominaisuuksia"</string>
+    <string name="ar_core_tracking_error_camera_unavailable">"Toinen sovellus käyttää kameraa"</string>
+    <string name="ar_core_tracking_error_too_steep_angle">"Liian jyrkkä kulma, astu hieman taaemmas."</string>
+    <string name="ar_core_tracking_error_no_plane_hit">"Pysy lähempänä osoitinta mutta varo liikennettä!"</string>
+    <string name="no_camera_permission_toast">"Kameran käyttöoikeutta ei ole"</string>
+    <string name="ar_core_tracking_hint_tap_to_measure">"Täppää ruutua aloittaaksesi mittauksen"</string>
+</resources>

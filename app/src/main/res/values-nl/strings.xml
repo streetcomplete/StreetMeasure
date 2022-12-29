@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="no_camera_permission_warning_title">"Camerarechten"</string>
+    <string name="no_camera_permission_warning">"De rechten zijn nodig om foto's te kunnen maken en om met de camera afstanden te meten."</string>
+    <string name="ar_core_error_sdk_too_old">"Deze app is te oud, probeer te updaten."</string>
+    <string name="ar_core_tracking_error_bad_state">"Er ging iets mis. Probeer de meting te herstarten."</string>
+    <string name="ar_core_tracking_error_insufficient_light">"Te donker hier"</string>
+    <string name="ar_core_tracking_error_excessive_motion">"Te veel beweging"</string>
+    <string name="ar_core_tracking_error_insufficient_features">"Onvoldoende zichtbare elementen hier"</string>
+    <string name="ar_core_tracking_error_camera_unavailable">"Camera wordt door een andere app gebruikt"</string>
+    <string name="ar_core_tracking_error_too_steep_angle">"Te steile hoek, loop iets verder weg"</string>
+    <string name="ar_core_tracking_error_no_plane_hit">"Ga dichter naar de pijl maar pas op voor het verkeer!"</string>
+    <string name="no_camera_permission_toast">"Geen cameratoestemming"</string>
+    <string name="ar_core_tracking_hint_tap_to_measure">"Druk op het scherm om te starten met meten"</string>
+</resources>

@@ -1,0 +1,5 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="Theme.StreetMeasure" parent="Theme.Material3.DayNight.NoActionBar">
+    </style>
+</resources>

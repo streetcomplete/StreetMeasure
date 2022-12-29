@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="no_camera_permission_warning_title">"مجوز تصویربرداری"</string>
+    <string name="no_camera_permission_warning">"این مجوز برای اندازه‌گیری مسافت‌ها از طریق واقعیت افزوده لازم است."</string>
+    <string name="ar_core_error_sdk_too_old">"این برنامه بسیار قدیمی است، لطفاً بروزرسانی کنید."</string>
+    <string name="ar_core_tracking_error_bad_state">"مشکلی پیش آمد. اندازه‌گیری را از ابتدا آغاز کنید."</string>
+    <string name="ar_core_tracking_error_insufficient_light">"اینجا خیلی تاریک است"</string>
+    <string name="ar_core_tracking_error_excessive_motion">"جابه‌جایی خیلی زیاد است"</string>
+    <string name="ar_core_tracking_error_insufficient_features">"امکانات بصری کافی در اینجا وجود ندارد"</string>
+    <string name="ar_core_tracking_error_camera_unavailable">"برنامهٔ دیگری از دوربین استفاده می‌کند"</string>
+    <string name="ar_core_tracking_error_too_steep_angle">"زاویه حاده، کمی فاصله بگیرید"</string>
+    <string name="ar_core_tracking_error_no_plane_hit">"به جهت‌یاب نزدیک‌تر شوید، اما مراقب عبور و مرور باشید!"</string>
+    <string name="no_camera_permission_toast">"محدودیت تصویربرداری"</string>
+    <string name="ar_core_tracking_hint_tap_to_measure">"برای شروع اندازه‌گیری، روی صفحه ضربه بزنید"</string>
+</resources>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="no_camera_permission_warning_title">"Dozvole za kameru"</string>
+    <string name="no_camera_permission_warning">"Da biste slikali fotografije i merili razdaljine su potrebne dozvole za kameru."</string>
+    <string name="ar_core_error_sdk_too_old">"Aplikacija je prestara, ažurirajte je."</string>
+    <string name="ar_core_tracking_error_bad_state">"Nešto je pošlo naopako. Probajte da restartujete merenje."</string>
+    <string name="ar_core_tracking_error_insufficient_light">"Ovde je premračno"</string>
+    <string name="ar_core_tracking_error_excessive_motion">"Previše pokreta"</string>
+    <string name="ar_core_tracking_error_insufficient_features">"Nedovoljno vizuelnih odlika ovde"</string>
+    <string name="ar_core_tracking_error_camera_unavailable">"Neka druga aplikacija koristi kameru"</string>
+    <string name="ar_core_tracking_error_too_steep_angle">"Previše strm ugao, odmaknite se"</string>
+    <string name="ar_core_tracking_error_no_plane_hit">"Držite blizu strelice, ali pazite na saobrać'aj!"</string>
+    <string name="no_camera_permission_toast">"Nema dozvola za kameru"</string>
+    <string name="ar_core_tracking_hint_tap_to_measure">"Dodirnite ekran da počnete merenje"</string>
+</resources>

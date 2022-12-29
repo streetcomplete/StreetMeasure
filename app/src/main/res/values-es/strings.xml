@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="no_camera_permission_warning_title">"Permiso de cámara"</string>
+    <string name="no_camera_permission_warning">"El permiso es necesario para poder hacer fotos y medir distancias con la cámara."</string>
+    <string name="ar_core_error_sdk_too_old">"Esta app es demasiado antigua, intenta actualizarla."</string>
+    <string name="ar_core_tracking_error_bad_state">"Algo salió mal. Intente reiniciar la medición."</string>
+    <string name="ar_core_tracking_error_insufficient_light">"Demasiado oscuro"</string>
+    <string name="ar_core_tracking_error_excessive_motion">"Demasiado movimiento"</string>
+    <string name="ar_core_tracking_error_insufficient_features">"Características visuales insuficientes"</string>
+    <string name="ar_core_tracking_error_camera_unavailable">"Otra aplicación está utilizando la cámara"</string>
+    <string name="ar_core_tracking_error_too_steep_angle">"Ángulo demasiado pronunciado, aléjate un poco"</string>
+    <string name="ar_core_tracking_error_no_plane_hit">"¡Manténgase más cerca de la flecha pero tenga cuidado con el tráfico!"</string>
+    <string name="no_camera_permission_toast">"Sin permiso de cámara"</string>
+    <string name="ar_core_tracking_hint_tap_to_measure">"Toque la pantalla para comenzar a medir"</string>
+</resources>

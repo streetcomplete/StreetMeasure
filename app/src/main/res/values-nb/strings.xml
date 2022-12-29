@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="no_camera_permission_warning_title">"Kameratillatelse"</string>
+    <string name="no_camera_permission_warning">"Tillatelsen er nødvendig for å kunne ta bilder og for å måle avstand med kameraet."</string>
+    <string name="ar_core_error_sdk_too_old">"Appen er utdatert, prøv å oppdatere."</string>
+    <string name="ar_core_tracking_error_bad_state">"Noe gikk galt. Gjør et nytt forsøk på å måle."</string>
+    <string name="ar_core_tracking_error_insufficient_light">"For mørkt her"</string>
+    <string name="ar_core_tracking_error_excessive_motion">"For mye bevegelse"</string>
+    <string name="ar_core_tracking_error_insufficient_features">"Ikke tilstrekkelig visuell variasjon her"</string>
+    <string name="ar_core_tracking_error_camera_unavailable">"Kamera er i bruk av en annen app"</string>
+    <string name="ar_core_tracking_error_too_steep_angle">"For bratt vinkel, gå lenger unna"</string>
+    <string name="ar_core_tracking_error_no_plane_hit">"Vær nærmere pilen, men følg med på trafikken!"</string>
+    <string name="no_camera_permission_toast">"Kameratillatelse mangler"</string>
+    <string name="ar_core_tracking_hint_tap_to_measure">"Trykk på skjermen for å begynne å måle"</string>
+</resources>

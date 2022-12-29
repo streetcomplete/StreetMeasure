@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="no_camera_permission_warning_title">"Oprávnění fotoaparátu"</string>
+    <string name="no_camera_permission_warning">"Oprávnění je nutné, aby bylo možné měřit vzdálenosti pomocí rozšířené reality."</string>
+    <string name="ar_core_error_sdk_too_old">"Tato aplikace je příliš stará, zkuste ji aktualizovat."</string>
+    <string name="ar_core_tracking_error_bad_state">"Něco je špatně. Zkuste měření restartovat."</string>
+    <string name="ar_core_tracking_error_insufficient_light">"Je tu příliš velká tma"</string>
+    <string name="ar_core_tracking_error_excessive_motion">"Příliš mnoho pohybu"</string>
+    <string name="ar_core_tracking_error_insufficient_features">"Nejsou tu žádné specifické vizuální prvky"</string>
+    <string name="ar_core_tracking_error_camera_unavailable">"Fotoaparát je používán jinou aplikací"</string>
+    <string name="ar_core_tracking_error_too_steep_angle">"Příliš velký úhel, trochu ustupte"</string>
+    <string name="ar_core_tracking_error_no_plane_hit">"Držte se blíže k šipce, ale dávejte pozor na provoz!"</string>
+    <string name="no_camera_permission_toast">"Fotoaparát není povolen"</string>
+    <string name="ar_core_tracking_hint_tap_to_measure">"Dotkněte se pro zahájení měření"</string>
+</resources>

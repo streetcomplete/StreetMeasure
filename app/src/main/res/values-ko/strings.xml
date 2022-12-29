@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="no_camera_permission_warning_title">"카메라 권한 필요"</string>
+    <string name="no_camera_permission_warning">"사진을 찍고 카메라로 거리 측정을 위해서는 권한이 필요합니다."</string>
+    <string name="ar_core_error_sdk_too_old">"이 앱은 너무 오래되었습니다, 업데이트하세요."</string>
+    <string name="ar_core_tracking_error_bad_state">"문제 발생. 측정을 다시 시도하세요."</string>
+    <string name="ar_core_tracking_error_insufficient_light">"너무 어두움"</string>
+    <string name="ar_core_tracking_error_excessive_motion">"움직임 심함"</string>
+    <string name="ar_core_tracking_error_insufficient_features">"시각적 지표 부족"</string>
+    <string name="ar_core_tracking_error_camera_unavailable">"다른 앱이 카메라 사용 중"</string>
+    <string name="ar_core_tracking_error_too_steep_angle">"기울기 너무 큼, 멀어지세요"</string>
+    <string name="ar_core_tracking_error_no_plane_hit">"교통 흐름에 주의하며 화살표에 가까이 가세요!"</string>
+    <string name="no_camera_permission_toast">"카메라 권한 없음"</string>
+    <string name="ar_core_tracking_hint_tap_to_measure">"측정을 위해 화면을 탭하세요"</string>
+</resources>

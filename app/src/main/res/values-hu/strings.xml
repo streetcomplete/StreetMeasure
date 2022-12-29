@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="no_camera_permission_warning_title">"Kamera engedély"</string>
+    <string name="no_camera_permission_warning">"Az engedély szükséges a kiterjesztett valósággal történő távolságméréshez."</string>
+    <string name="ar_core_error_sdk_too_old">"Az alkalmazás túl régi, próbáld meg frissíteni."</string>
+    <string name="ar_core_tracking_error_bad_state">"Valami hiba történt. Próbáld újraindítani a mérést."</string>
+    <string name="ar_core_tracking_error_insufficient_light">"Itt túl sötét van"</string>
+    <string name="ar_core_tracking_error_excessive_motion">"Túl sok mozgás"</string>
+    <string name="ar_core_tracking_error_insufficient_features">"Elégtelen vizuális jellemzők"</string>
+    <string name="ar_core_tracking_error_camera_unavailable">"A kamerát egy másik alkalmazás használja"</string>
+    <string name="ar_core_tracking_error_too_steep_angle">"Túl meredek szög, állj egy kicsit távolabb"</string>
+    <string name="ar_core_tracking_error_no_plane_hit">"Menj közelebb a nyílhoz, de vigyázz a forgalomra!"</string>
+    <string name="no_camera_permission_toast">"Nincs hozzáférés a kamerához."</string>
+    <string name="ar_core_tracking_hint_tap_to_measure">"Érintsd meg a képernyőt a mérés megkezdéséhez"</string>
+</resources>

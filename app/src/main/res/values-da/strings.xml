@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="no_camera_permission_warning_title">"Kameratilladelse"</string>
+    <string name="no_camera_permission_warning">"Tilladelsen er nødvendig for at kunne tage billeder og måle afstande med kameraet."</string>
+    <string name="ar_core_error_sdk_too_old">"Denne app er for gammel. Prøv at opdatere."</string>
+    <string name="ar_core_tracking_error_bad_state">"Noget gik galt. Prøv at genstarte opmålingen."</string>
+    <string name="ar_core_tracking_error_insufficient_light">"For mørkt her"</string>
+    <string name="ar_core_tracking_error_excessive_motion">"For meget bevægelse"</string>
+    <string name="ar_core_tracking_error_insufficient_features">"Utilstrækkelige visuelle kendetegn her"</string>
+    <string name="ar_core_tracking_error_camera_unavailable">"Kameraet bruges af en anden app"</string>
+    <string name="ar_core_tracking_error_too_steep_angle">"Vinklen er for stejl, træd en smule væk"</string>
+    <string name="ar_core_tracking_error_no_plane_hit">"Hold dig tættere på pilen, men hold øje med trafikken!"</string>
+    <string name="no_camera_permission_toast">"Ingen kameratilladelse"</string>
+    <string name="ar_core_tracking_hint_tap_to_measure">"Tryk på skærmen for at starte opmåling"</string>
+</resources>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="no_camera_permission_warning_title">"Fotila permeso"</string>
+    <string name="no_camera_permission_warning">"La permeso estas necesa por povi fari fotojn kaj mezuri distancojn per la fotilo."</string>
+    <string name="ar_core_error_sdk_too_old">"Ĉi tiu aplikaĵo estas tro malnova, provu ĝisdatigi."</string>
+    <string name="ar_core_tracking_error_bad_state">"Io misfunkciis. Provu rekomenci la mezuradon."</string>
+    <string name="ar_core_tracking_error_insufficient_light">"Tro malhela ĉi tie"</string>
+    <string name="ar_core_tracking_error_excessive_motion">"Tro da movado"</string>
+    <string name="ar_core_tracking_error_insufficient_features">"Nesufiĉaj vidaj ecoj ĉi tie"</string>
+    <string name="ar_core_tracking_error_camera_unavailable">"Fotilo estas uzata de alia programo"</string>
+    <string name="ar_core_tracking_error_too_steep_angle">"Tro kruta angulo, foriru iom"</string>
+    <string name="ar_core_tracking_error_no_plane_hit">"Daŭrigu pli proksime al la sago sed atentu trafikon!"</string>
+    <string name="no_camera_permission_toast">"Neniu fotila permeso"</string>
+    <string name="ar_core_tracking_hint_tap_to_measure">"Frapu ekranon por komenci mezuri"</string>
+</resources>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="no_camera_permission_warning_title">"Άδεια κάμερας"</string>
+    <string name="no_camera_permission_warning">"Η άδεια είναι απαραίτητη για να μπορούμε να μετράμε αποστάσεις με επαυξημένη πραγματικότητα."</string>
+    <string name="ar_core_error_sdk_too_old">"Αυτή η εφαρμογή είναι πολύ παλιά, δοκιμάστε ενημέρωση."</string>
+    <string name="ar_core_tracking_error_bad_state">"Κάτι πήγε στραβά. Δοκιμάστε να επανεκκινήσετε τη μέτρηση."</string>
+    <string name="ar_core_tracking_error_insufficient_light">"Πολύ σκοτεινά εδώ"</string>
+    <string name="ar_core_tracking_error_excessive_motion">"Πάρα πολύ κίνηση"</string>
+    <string name="ar_core_tracking_error_insufficient_features">"Ανεπαρκή οπτικά χαρακτηριστικά εδώ"</string>
+    <string name="ar_core_tracking_error_camera_unavailable">"Η κάμερα χρησιμοποιείται από άλλη εφαρμογή"</string>
+    <string name="ar_core_tracking_error_too_steep_angle">"Πολύ απότομη γωνία, απομακρυνθείτε λίγο"</string>
+    <string name="ar_core_tracking_error_no_plane_hit">"Μείνετε πιο κοντά στο βέλος αλλά προσέξτε την κυκλοφορία!"</string>
+    <string name="no_camera_permission_toast">"Δεν υπάρχει άδεια κάμερας"</string>
+    <string name="ar_core_tracking_hint_tap_to_measure">"Πατήστε την οθόνη για έναρξη μέτρησης"</string>
+</resources>

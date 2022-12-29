@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="no_camera_permission_warning_title">"Fotoaparato leidimas"</string>
+    <string name="no_camera_permission_warning">"Leidimas reikalingas norint fotografuoti ir matuoti atstumus fotoaparatu."</string>
+    <string name="ar_core_error_sdk_too_old">"Ši programa yra per sena, pabandykite ją atnaujinti."</string>
+    <string name="ar_core_tracking_error_bad_state">"Kažkas nutiko ne taip. Pabandykite iš naujo paleisti matavimą."</string>
+    <string name="ar_core_tracking_error_insufficient_light">"Čia per tamsu"</string>
+    <string name="ar_core_tracking_error_excessive_motion">"Per daug judėjimo"</string>
+    <string name="ar_core_tracking_error_insufficient_features">"Nepakankamai vizualinių funkcijų"</string>
+    <string name="ar_core_tracking_error_camera_unavailable">"Fotoaparatą naudoja kita programa"</string>
+    <string name="ar_core_tracking_error_too_steep_angle">"Per daug stačiu kampu, šiek tiek atsitraukite"</string>
+    <string name="ar_core_tracking_error_no_plane_hit">"Laikykitės arčiau rodyklės, bet saugokitės eismo!"</string>
+    <string name="no_camera_permission_toast">"Leidimo naudoti fotoaparatą nėra"</string>
+    <string name="ar_core_tracking_hint_tap_to_measure">"Bakstelėkite ekraną, kad pradėtumėte matuoti"</string>
+</resources>

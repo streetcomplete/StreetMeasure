@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="no_camera_permission_warning_title">"Camera permission"</string>
+    <string name="no_camera_permission_warning">"The permission is required to take photos and measure distances with the camera."</string>
+    <string name="ar_core_error_sdk_too_old">"This app is too old, try updating."</string>
+    <string name="ar_core_tracking_error_bad_state">"Something went wrong. Try restarting the measuring."</string>
+    <string name="ar_core_tracking_error_insufficient_light">"Too dark here"</string>
+    <string name="ar_core_tracking_error_excessive_motion">"Too much movement"</string>
+    <string name="ar_core_tracking_error_insufficient_features">"Insufficient visual features here"</string>
+    <string name="ar_core_tracking_error_camera_unavailable">"Camera is used by another app"</string>
+    <string name="ar_core_tracking_error_too_steep_angle">"Too steep of an angle, step away a bit"</string>
+    <string name="ar_core_tracking_error_no_plane_hit">"Keep closer to the arrow but watch out for traffic!"</string>
+    <string name="no_camera_permission_toast">"No camera permission"</string>
+    <string name="ar_core_tracking_hint_tap_to_measure">"Tap screen to start measuring"</string>
+</resources>

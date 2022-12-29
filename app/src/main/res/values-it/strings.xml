@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="no_camera_permission_warning_title">"Permessi della fotocamera"</string>
+    <string name="no_camera_permission_warning">"I permessi sono necessari per poter misurare le distanze con la realtà aumentata."</string>
+    <string name="ar_core_error_sdk_too_old">"Questa app è di una versione troppo vecchia, prova ad aggiornarla."</string>
+    <string name="ar_core_tracking_error_bad_state">"Qualcosa è andato storto. Prova a far ripartire la misurazione."</string>
+    <string name="ar_core_tracking_error_insufficient_light">"Troppo buio"</string>
+    <string name="ar_core_tracking_error_excessive_motion">"Troppo movimento"</string>
+    <string name="ar_core_tracking_error_insufficient_features">"Caratteristiche visive insufficienti in questa zona"</string>
+    <string name="ar_core_tracking_error_camera_unavailable">"La fotocamera è in uso da un'altra applicazione"</string>
+    <string name="ar_core_tracking_error_too_steep_angle">"Angolazione troppo inclinata, prova a fare qualche passo indietro"</string>
+    <string name="ar_core_tracking_error_no_plane_hit">"Avvicinati alla freccia ma attenzione al traffico!"</string>
+    <string name="no_camera_permission_toast">"Accesso alla fotocamera mancante"</string>
+    <string name="ar_core_tracking_hint_tap_to_measure">"Premi lo schermo per iniziare a misurare"</string>
+</resources>

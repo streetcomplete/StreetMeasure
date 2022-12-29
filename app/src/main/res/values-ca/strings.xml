@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="no_camera_permission_warning_title">"Permisos de càmera"</string>
+    <string name="no_camera_permission_warning">"El permís és necessari per a poder mesurar distàncies amb realitat augmentada."</string>
+    <string name="ar_core_error_sdk_too_old">"Aquesta aplicació és massa antiga, intenta a actualitzar."</string>
+    <string name="ar_core_tracking_error_bad_state">"Quelcom ha anat malament. Intenta a reiniciar el mesurament."</string>
+    <string name="ar_core_tracking_error_insufficient_light">"Hi ha molta foscor"</string>
+    <string name="ar_core_tracking_error_excessive_motion">"Massa moviment"</string>
+    <string name="ar_core_tracking_error_insufficient_features">"Característiques visuals insuficients"</string>
+    <string name="ar_core_tracking_error_camera_unavailable">"La càmera està sent usada per una altra app"</string>
+    <string name="ar_core_tracking_error_too_steep_angle">"Massa inclinat, aparteu-vos una mica"</string>
+    <string name="ar_core_tracking_error_no_plane_hit">"Mantén més pròxim a la fletxa, però vigila amb el trànsit!"</string>
+    <string name="no_camera_permission_toast">"No hi ha permís per a fer servir la càmera"</string>
+    <string name="ar_core_tracking_hint_tap_to_measure">"Toca la pantalla per iniciar el mesurament"</string>
+</resources>
