@@ -12,6 +12,10 @@ android {
 
     signingConfigs {
         create("release") {
+            keyAlias = properties["streetmeasureKeyAlias"] as String?
+            storePassword = properties["streetmeasureStorePassword"] as String?
+            keyPassword = properties["streetmeasureKeyPassword"] as String?
+            storeFile = file(properties["streetmeasureStoreFile"] as String)
         }
     }
 
@@ -25,6 +29,7 @@ android {
 
     buildTypes {
         release {
+            signingConfig = signingConfigs.getByName("release")
             isMinifyEnabled = true
             isShrinkResources = false
             proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
@@ -62,17 +67,6 @@ dependencies {
     // measuring distance with AR
     implementation("com.google.ar:core:1.35.0")
     implementation("com.google.ar.sceneform:core:1.17.1")
-}
-
-val keystorePropertiesFile = rootProject.file("keystore.properties")
-if (keystorePropertiesFile.exists()) {
-    val props = Properties()
-    props.load(FileInputStream(keystorePropertiesFile))
-    val releaseSigningConfig = android.signingConfigs.getByName("release")
-    releaseSigningConfig.storeFile = file(props.getProperty("storeFile"))
-    releaseSigningConfig.storePassword = props.getProperty("storePassword")
-    releaseSigningConfig.keyAlias = props.getProperty("keyAlias")
-    releaseSigningConfig.keyPassword = props.getProperty("keyPassword")
 }
 
 tasks.register<UpdateAppTranslationsTask>("updateTranslations") {
