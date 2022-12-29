@@ -23,7 +23,7 @@
                 <item android:state_enabled="false">
                     <shape android:shape="rectangle">
                         <corners android:radius="@dimen/round_button_radius" />
-                        <solid android:color="?android:attr/colorButtonNormal"/>
+                        <solid android:color="#eee"/>
                         <padding android:left="@dimen/round_button_padding"
                                  android:top="@dimen/round_button_padding"
                                  android:right="@dimen/round_button_padding"
