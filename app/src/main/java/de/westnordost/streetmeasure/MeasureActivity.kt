@@ -68,7 +68,7 @@ class MeasureActivity : AppCompatActivity(), Scene.OnUpdateListener {
     private var cursorNode: AnchorNode? = null
 
     private var measureVertical: Boolean = false
-    private var displayUnit: MeasureDisplayUnit = MeasureDisplayUnitMeter(10)
+    private var displayUnit: MeasureDisplayUnit = MeasureDisplayUnitMeter(1)
     private var isDisplayUnitFixed: Boolean = false
 
     private var requestResult: Boolean = false
@@ -189,11 +189,7 @@ class MeasureActivity : AppCompatActivity(), Scene.OnUpdateListener {
             else -> false
         }
 
-        val precisionStepInt = intent.getIntExtra(PARAM_PRECISION_STEP, -1)
-        val precisionStep =
-            if (!isDisplayUnitFixed || precisionStepInt == -1) { if (isFeetInch) 4 else 10 }
-            else precisionStepInt
-
+        val precisionStep = intent.getIntExtra(PARAM_PRECISION_STEP, 1)
         displayUnit =
             if (isFeetInch) MeasureDisplayUnitFeetInch(precisionStep.coerceIn(1, 12))
             else MeasureDisplayUnitMeter(precisionStep.coerceIn(1, 100))
@@ -217,8 +213,8 @@ class MeasureActivity : AppCompatActivity(), Scene.OnUpdateListener {
     private fun toggleUnit() {
         binding.unitButtonImage.flip(150) {
             displayUnit = when (displayUnit) {
-                is MeasureDisplayUnitFeetInch -> MeasureDisplayUnitMeter(10)
-                is MeasureDisplayUnitMeter -> MeasureDisplayUnitFeetInch(4)
+                is MeasureDisplayUnitFeetInch -> MeasureDisplayUnitMeter(1)
+                is MeasureDisplayUnitMeter -> MeasureDisplayUnitFeetInch(1)
             }
             prefs.edit {
                 putBoolean(PREF_IS_FT_IN, displayUnit is MeasureDisplayUnitFeetInch)
@@ -584,11 +580,10 @@ class MeasureActivity : AppCompatActivity(), Scene.OnUpdateListener {
          *  */
         const val PARAM_REQUEST_RESULT = "request_result"
 
-        /** Int. The steps to which the measure result is rounded. Only taken into account if
-         *  PARAM_UNIT is specified.
+        /** Int. The steps to which the measure result is rounded.
          *
-         *  If PARAM_UNIT = UNIT_METER, 1 is 1cm, 10 is 10cm. Defaults to 10.
-         *  If PARAM_UNIT = UNIT_FOOT_AND_INCH, 1 is 1in, 12 is 1ft. Defaults to 4.
+         *  If PARAM_UNIT = UNIT_METER, 1 is 1cm, 10 is 10cm.
+         *  If PARAM_UNIT = UNIT_FOOT_AND_INCH, 1 is 1in, 12 is 1ft.
          *
          *  For measuring widths along several meters (road widths), it is recommended to use 10cm
          *  / 4 inches, because a higher precision cannot be achieved on average with ARCore anyway
