@@ -36,12 +36,19 @@ you probably don't even want to show the user the option to do so.
 
 ```kotlin
 fun hasArMeasureSupport(context: Context): Boolean =
-    Build.VERSION.SDK_INT >= Build.VERSION_CODES.N
-    && context.getSystemService<ActivityManager>()!!.deviceConfigurationInfo.glEsVersion.toDouble() >= 3.1
-    && (
-      context.packageManager.getLaunchIntentForPackage("de.westnordost.streetmeasure") != null
-      || context.packageManager.resolveActivity(Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=de.westnordost.streetmeasure")), 0) != null
-    )
+  // extra requirements for Sceneform: min Android SDK and OpenGL ES 3.1
+  Build.VERSION.SDK_INT >= Build.VERSION_CODES.N
+  && context.getSystemService<ActivityManager>()!!.deviceConfigurationInfo.glEsVersion.toDouble() >= 3.1
+  // Google Play is required to lead the user through installing the app
+  && (
+    // app is already installed
+    context.packageManager.isPackageInstalled("de.westnordost.streetmeasure")
+    // or at least google play is installed
+    || context.packageManager.isPackageInstalled("com.android.vending")
+  )
+
+private fun PackageManager.isPackageInstalled(packageName: String): Boolean =
+  try { getPackageInfo(packageName, 0) != null } catch (e: NameNotFoundException) { false }
 ```
 
 - it is not available in Android versions below 7.0 and requires OpenGL ES 3.1
@@ -51,7 +58,8 @@ fun hasArMeasureSupport(context: Context): Boolean =
 If it returns true, it may still be the case that [his device is not supported](https://developers.google.com/ar/devices)
 but this is something we cannot check for at this point.
 
-Do not forget to add `<package android:name="de.westnordost.streetmeasure"/>` to the 
+Do not forget to add `<package android:name="de.westnordost.streetmeasure"/>` and
+`<package android:name="com.android.vending"/>` to the 
 [`<queries>`](https://developer.android.com/guide/topics/manifest/queries-element) block in your 
 Android manifest. In Android 11 onwards, it must be declared which packages the app should be
 capable of communicating with.
