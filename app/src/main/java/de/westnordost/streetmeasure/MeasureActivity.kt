@@ -69,9 +69,10 @@ class MeasureActivity : AppCompatActivity(), Scene.OnUpdateListener {
 
     private var measureVertical: Boolean = false
     private var displayUnit: MeasureDisplayUnit = MeasureDisplayUnitMeter(1)
+    private var isDisplayUnitFixed: Boolean = false
 
     private var requestResult: Boolean = false
-    private var arrowColor: Int = -1
+    private var measuringTapeColor: Int = -1
 
     private enum class MeasureState { READY, MEASURING, DONE }
     private var measureState: MeasureState = MeasureState.READY
@@ -111,7 +112,7 @@ class MeasureActivity : AppCompatActivity(), Scene.OnUpdateListener {
         setContentView(binding.root)
 
         binding.directionButton.isGone = requestResult
-        binding.unitButton.isGone = requestResult
+        binding.unitButton.isGone = isDisplayUnitFixed
 
         updateDirectionButtonEnablement()
         updateDirectionButtonImage()
@@ -172,20 +173,32 @@ class MeasureActivity : AppCompatActivity(), Scene.OnUpdateListener {
 
     private fun readIntent() {
         measureVertical = intent.getBooleanExtra(PARAM_MEASURE_VERTICAL, measureVertical)
-        val isFeetInch = when (intent.getStringExtra(PARAM_DISPLAY_UNIT)) {
-            DISPLAY_UNIT_METERS -> false
-            DISPLAY_UNIT_FT_IN -> true
+
+        val displayUnitStr = intent.getStringExtra(PARAM_UNIT)
+        val isFeetInch = when (displayUnitStr) {
+            UNIT_METER -> false
+            UNIT_FOOT_AND_INCH -> true
             else -> prefs.getBoolean(
                 PREF_IS_FT_IN,
                 resources.configuration.locales.get(0).country in countriesWhereFeetInchIsUsed
             )
         }
-        val precisionStep = intent.getIntExtra(PARAM_PRECISION_STEP, 1)
+        isDisplayUnitFixed = when (displayUnitStr) {
+            UNIT_METER, UNIT_FOOT_AND_INCH -> true
+            else -> false
+        }
+
+        val precisionStepInt = intent.getIntExtra(PARAM_PRECISION_STEP, -1)
+        val precisionStep =
+            if (precisionStepInt == -1) { if (isFeetInch) 4 else 10 }
+            else precisionStepInt
         displayUnit = createMeasureDisplayUnit(isFeetInch, precisionStep)
-        val arrowColorInt = intent.getIntExtra(PARAM_ARROW_COLOR, -1)
-        arrowColor = if (arrowColorInt == -1) {
+
+        val measuringTapeColorInt = intent.getIntExtra(PARAM_MEASURING_TAPE_COLOR, -1)
+        measuringTapeColor = if (measuringTapeColorInt == -1) {
             android.graphics.Color.argb(255, 209, 64, 0)
-        } else arrowColorInt
+        } else measuringTapeColorInt
+
         requestResult = intent.getBooleanExtra(PARAM_REQUEST_RESULT, false)
     }
 
@@ -207,6 +220,7 @@ class MeasureActivity : AppCompatActivity(), Scene.OnUpdateListener {
 
     private fun toggleUnit() {
         binding.unitButtonImage.flip(150) {
+            TODO("default cm step and inchstep!!")
             displayUnit = when (displayUnit) {
                 is MeasureDisplayUnitFeetInch -> MeasureDisplayUnitMeter(1)
                 is MeasureDisplayUnitMeter -> MeasureDisplayUnitFeetInch(1)
@@ -368,7 +382,7 @@ class MeasureActivity : AppCompatActivity(), Scene.OnUpdateListener {
 
     private suspend fun initRenderables() {
         // takes about half a second on a high-end device(!)
-        val materialBlue = MaterialFactory.makeOpaqueWithColor(this, Color(arrowColor)).await()
+        val materialBlue = MaterialFactory.makeOpaqueWithColor(this, Color(measuringTapeColor)).await()
         cursorRenderable = ViewRenderable.builder().setView(this, R.layout.view_ar_cursor).build().await()
         pointRenderable = ShapeFactory.makeCylinder(0.03f, 0.005f, Vector3.zero(), materialBlue)
         lineRenderable = ShapeFactory.makeCube(Vector3(0.02f, 0.005f, 1f), Vector3.zero(), materialBlue)
@@ -443,11 +457,11 @@ class MeasureActivity : AppCompatActivity(), Scene.OnUpdateListener {
         when (val displayUnit = displayUnit) {
             is MeasureDisplayUnitFeetInch -> {
                 val (feet, inches) = displayUnit.getRounded(distance)
-                resultIntent.putExtra(RESULT_MEASURE_FEET, feet)
-                resultIntent.putExtra(RESULT_MEASURE_INCHES, inches)
+                resultIntent.putExtra(RESULT_FEET, feet)
+                resultIntent.putExtra(RESULT_INCHES, inches)
             }
             is MeasureDisplayUnitMeter -> {
-                resultIntent.putExtra(RESULT_MEASURE_METERS, displayUnit.getRounded(distance))
+                resultIntent.putExtra(RESULT_METERS, displayUnit.getRounded(distance))
             }
         }
         setResult(RESULT_OK, resultIntent)
@@ -557,38 +571,39 @@ class MeasureActivity : AppCompatActivity(), Scene.OnUpdateListener {
 
         /* --------------------------------- Intent Parameters ---------------------------------- */
 
-        /** Boolean. Whether to measure vertical distances. Default is to measure horizontal. */
+        /** Boolean. Whether to measure vertical instead of horizontal distances.
+         *  Default is to measure horizontal. */
         const val PARAM_MEASURE_VERTICAL = "measure_vertical"
 
         /** String. Specifies which unit should be used for display and result returned.
-            Either DISPLAY_UNIT_METERS or DISPLAY_UNIT_FT_IN. Default depends on the user's locale
+            Either UNIT_METER or UNIT_FOOT_AND_INCH. If it is not defined, a unit is
+            selected based on the user's locale and he is able to switch between units
          */
-        const val PARAM_DISPLAY_UNIT = "display_unit"
+        const val PARAM_UNIT = "unit"
 
-        const val DISPLAY_UNIT_METERS = "meters"
-        const val DISPLAY_UNIT_FT_IN = "ft_in"
+        const val UNIT_METER = "meter"
+        const val UNIT_FOOT_AND_INCH = "foot_and_inch"
 
         /** Boolean. Whether this activity should return a result. If yes, the activity will return
          *  the measure result in RESULT_MEASURE_METERS or RESULT_MEASURE_FEET + RESULT_MEASURE_INCHES
          *  */
         const val PARAM_REQUEST_RESULT = "request_result"
 
-        /** Int. If PARAM_DISPLAY_UNIT = DISPLAY_UNIT_METERS, the centimeter steps to which the
-         *  measure result is rounded during display and in the returned result. E.g. 10 means it is
-         *  rounded to the decimeter.
-         *  If PARAM_DISPLAY_UNIT = DISPLAY_UNIT_FT_IN, the inch steps to which the measure result
-         *  is rounded during display and in the returned result. Only values between 1 and 12 are
-         *  accepted. E.g. 12 means that it is rounded to the full foot.
+        /** Int. The steps to which the measure result is rounded. Only taken into account if
+         *  PARAM_UNIT is specified. TODO()
+         *
+         *  If PARAM_UNIT = UNIT_METER, 1 is 1cm, 10 is 10cm. Defaults to 10.
+         *  If PARAM_UNIT = UNIT_FOOT_AND_INCH, 1 is 1in, 12 is 1ft. Defaults to 4.
          *
          *  For measuring widths along several meters (road widths), it is recommended to use 10cm
          *  / 4 inches, because a higher precision cannot be achieved on average with ARCore anyway
          *  and displaying the value in that precision may give a false sense that the measurement
          *  is that precise. */
-        const val PARAM_PRECISION_STEP = "display_precision"
+        const val PARAM_PRECISION_STEP = "precision_step"
 
-        /** Int. Color value of the measurement arrow. By default is orange
+        /** Int. Color value of the measuring tape. Default is orange.
          */
-        const val PARAM_ARROW_COLOR = "arrow_color"
+        const val PARAM_MEASURING_TAPE_COLOR = "measuring_tape_color"
 
         /* ----------------------------------- Intent Result ------------------------------------ */
 
@@ -596,12 +611,12 @@ class MeasureActivity : AppCompatActivity(), Scene.OnUpdateListener {
         const val RESULT_ACTION = "de.westnordost.streetmeasure.RESULT_ACTION"
 
         /** The result as displayed to the user, set if display unit was meters. Double. */
-        const val RESULT_MEASURE_METERS = "measure_result_meters"
+        const val RESULT_METERS = "meters"
 
         /** The result as displayed to the user, set if display unit was feet+inches. Int. */
-        const val RESULT_MEASURE_FEET = "measure_result_feet"
+        const val RESULT_FEET = "feet"
 
         /** The result as displayed to the user, set if display unit was feet+inches. Int. */
-        const val RESULT_MEASURE_INCHES = "measure_result_inches"
+        const val RESULT_INCHES = "inches"
     }
 }

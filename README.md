@@ -9,6 +9,16 @@ It turned out that Google's [ARCore library is not licensed under the Apache lic
 
 This means that this library cannot be used by any GPL licensed project, hence, I took the AR measuring stuff and released it in an own app under a permissive license which does not have this constraint.
 
+## Usage
+
+You can call this activity for result to let the user make a measurement and return its result to 
+your app. See the [Android documentation](https://developer.android.com/training/basics/intents/result) on how to do this.
+
+A type-safe `ActivityResultContract` interface is available at [MeasureContract.kt](https://github.com/streetcomplete/StreetMeasure/blob/master/app/src/main/java/de/westnordost/streetmeasure/MeasureContract.kt), you can just copy it.
+
+Alternatively, consult the [documentation in the code](https://github.com/streetcomplete/StreetMeasure/blob/master/app/src/main/java/de/westnordost/streetmeasure/MeasureActivity.kt#L553-L607) which raw parameters are available and what is returned in the result
+`Intent` if you want to do it the old way.
+
 ## License
 
 This software is released under the terms of the [Apache License, Version 2.0](https://www.apache.org/licenses/LICENSE-2.0).
