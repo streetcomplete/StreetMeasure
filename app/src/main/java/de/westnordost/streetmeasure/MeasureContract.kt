@@ -1,6 +1,7 @@
 package de.westnordost.streetmeasure
 
 import android.app.Activity
+import android.content.ActivityNotFoundException
 import android.content.Context
 import android.content.Intent
 import androidx.activity.result.contract.ActivityResultContract
@@ -41,7 +42,8 @@ class MeasureContract : ActivityResultContract<MeasureContract.Params, Length?>(
             LengthUnit.FOOT_AND_INCH -> "foot_and_inch"
             null -> null
         }
-        val intent = context.packageManager.getLaunchIntentForPackage("de.westnordost.streetmeasure")!!
+        val intent = context.packageManager.getLaunchIntentForPackage("de.westnordost.streetmeasure")
+            ?: throw ActivityNotFoundException()
         intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK
         intent.putExtra("request_result", true)
         intent.putExtra("unit", unit)
