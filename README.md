@@ -46,16 +46,15 @@ fun hasArMeasureSupport(context: Context): Boolean =
 
 - it is not available in Android versions below 7.0 and requires OpenGL ES 3.1
 - if not already installed, the measuring app is only available on Google Play store (not on 
-  F-Droid), so if the neither of the two is installed, no point in showing it to the user as an
-  option
+  F-Droid). So if neither of the two is installed, no point in showing it to the user as an option
 
 If it returns true, it may still be the case that [his device is not supported](https://developers.google.com/ar/devices)
-but this is something we cannot check for at this point:
+but this is something we cannot check for at this point.
 
 Do not forget to add `<package android:name="de.westnordost.streetmeasure"/>` to the 
 [`<queries>`](https://developer.android.com/guide/topics/manifest/queries-element) block in your 
 Android manifest. In Android 11 onwards, it must be declared which packages the app should be
-capable of talking to.
+capable of communicating with.
 
 ## License
 
