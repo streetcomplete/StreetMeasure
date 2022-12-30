@@ -16,8 +16,10 @@ your app. See the [Android documentation](https://developer.android.com/training
 
 A type-safe `ActivityResultContract` interface is available at [MeasureContract.kt](https://github.com/streetcomplete/StreetMeasure/blob/master/app/src/main/java/de/westnordost/streetmeasure/MeasureContract.kt), you can just copy it.
 
-Alternatively, consult the [documentation in the code](https://github.com/streetcomplete/StreetMeasure/blob/master/app/src/main/java/de/westnordost/streetmeasure/MeasureActivity.kt#L553-L607) which raw parameters are available and what is returned in the result
+Alternatively, consult the [documentation in the code](https://github.com/streetcomplete/StreetMeasure/blob/master/app/src/main/java/de/westnordost/streetmeasure/MeasureActivity.kt#L567-L616) which raw parameters are available and what is returned in the result
 `Intent` if you want to do it the old way.
+
+Do not forget to add `<package android:name="de.westnordost.streetmeasure"/>` to the [`<queries>`](https://developer.android.com/guide/topics/manifest/queries-element) block in your Android manifest.
 
 ## License
 

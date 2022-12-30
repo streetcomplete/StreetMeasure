@@ -68,7 +68,7 @@ class MeasureActivity : AppCompatActivity(), Scene.OnUpdateListener {
     private var cursorNode: AnchorNode? = null
 
     private var measureVertical: Boolean = false
-    private var displayUnit: MeasureDisplayUnit = MeasureDisplayUnitMeter(1)
+    private var displayUnit: MeasureDisplayUnit = MeasureDisplayUnitMeter(10)
     private var isDisplayUnitFixed: Boolean = false
 
     private var requestResult: Boolean = false
@@ -172,6 +172,7 @@ class MeasureActivity : AppCompatActivity(), Scene.OnUpdateListener {
     }
 
     private fun readIntent() {
+        requestResult = intent.getBooleanExtra(PARAM_REQUEST_RESULT, false)
         measureVertical = intent.getBooleanExtra(PARAM_MEASURE_VERTICAL, measureVertical)
 
         val displayUnitStr = intent.getStringExtra(PARAM_UNIT)
@@ -190,23 +191,18 @@ class MeasureActivity : AppCompatActivity(), Scene.OnUpdateListener {
 
         val precisionStepInt = intent.getIntExtra(PARAM_PRECISION_STEP, -1)
         val precisionStep =
-            if (precisionStepInt == -1) { if (isFeetInch) 4 else 10 }
+            if (!isDisplayUnitFixed || precisionStepInt == -1) { if (isFeetInch) 4 else 10 }
             else precisionStepInt
-        displayUnit = createMeasureDisplayUnit(isFeetInch, precisionStep)
+
+        displayUnit =
+            if (isFeetInch) MeasureDisplayUnitFeetInch(precisionStep.coerceIn(1, 12))
+            else MeasureDisplayUnitMeter(precisionStep.coerceIn(1, 100))
 
         val measuringTapeColorInt = intent.getIntExtra(PARAM_MEASURING_TAPE_COLOR, -1)
         measuringTapeColor = if (measuringTapeColorInt == -1) {
             android.graphics.Color.argb(255, 209, 64, 0)
         } else measuringTapeColorInt
-
-        requestResult = intent.getBooleanExtra(PARAM_REQUEST_RESULT, false)
     }
-
-    private fun createMeasureDisplayUnit(isFeetInch: Boolean, precisionStep: Int): MeasureDisplayUnit =
-        if (isFeetInch)
-            MeasureDisplayUnitFeetInch(precisionStep.coerceIn(1, 12))
-        else
-            MeasureDisplayUnitMeter(precisionStep.coerceIn(1, 100))
 
     /* ---------------------------------------- Buttons ----------------------------------------- */
 
@@ -220,10 +216,9 @@ class MeasureActivity : AppCompatActivity(), Scene.OnUpdateListener {
 
     private fun toggleUnit() {
         binding.unitButtonImage.flip(150) {
-            TODO("default cm step and inchstep!!")
             displayUnit = when (displayUnit) {
-                is MeasureDisplayUnitFeetInch -> MeasureDisplayUnitMeter(1)
-                is MeasureDisplayUnitMeter -> MeasureDisplayUnitFeetInch(1)
+                is MeasureDisplayUnitFeetInch -> MeasureDisplayUnitMeter(10)
+                is MeasureDisplayUnitMeter -> MeasureDisplayUnitFeetInch(4)
             }
             prefs.edit {
                 putBoolean(PREF_IS_FT_IN, displayUnit is MeasureDisplayUnitFeetInch)
@@ -590,7 +585,7 @@ class MeasureActivity : AppCompatActivity(), Scene.OnUpdateListener {
         const val PARAM_REQUEST_RESULT = "request_result"
 
         /** Int. The steps to which the measure result is rounded. Only taken into account if
-         *  PARAM_UNIT is specified. TODO()
+         *  PARAM_UNIT is specified.
          *
          *  If PARAM_UNIT = UNIT_METER, 1 is 1cm, 10 is 10cm. Defaults to 10.
          *  If PARAM_UNIT = UNIT_FOOT_AND_INCH, 1 is 1in, 12 is 1ft. Defaults to 4.
