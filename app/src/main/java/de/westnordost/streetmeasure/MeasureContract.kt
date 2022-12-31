@@ -22,7 +22,7 @@ class MeasureContract : ActivityResultContract<MeasureContract.Params, Length?>(
         /** The steps to which the measure result is rounded.
          *
          *  If lengthUnit = METER, 1 is 1cm, 10 is 10cm.
-         *  If PARAM_UNIT = FOOT_AND_INCH, 1 is 1in, 12 is 1ft.
+         *  If lengthUnit = FOOT_AND_INCH, 1 is 1in, 12 is 1ft.
          *
          *  For measuring widths along several meters (road widths), it is recommended to use 10cm
          *  / 4 inches, because a higher precision cannot be achieved on average with ARCore anyway
