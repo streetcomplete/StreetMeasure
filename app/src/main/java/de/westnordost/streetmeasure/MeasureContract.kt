@@ -19,17 +19,24 @@ class MeasureContract : ActivityResultContract<MeasureContract.Params, Length?>(
          *  defined, a unit is selected based on the user's locale and he is able to switch between
          *  units. */
         val lengthUnit: LengthUnit? = null,
-        /** The steps to which the measure result is rounded.
+        /** The precision in centimeters if lengthUnit = METER to which the measure result is
+         *  rounded.
          *
-         *  If lengthUnit = METER, 1 is 1cm, 10 is 10cm.
-         *  If lengthUnit = FOOT_AND_INCH, 1 is 1in, 12 is 1ft.
-         *
-         *  For measuring widths along several meters (road widths), it is recommended to use 10cm
-         *  / 4 inches, because a higher precision cannot be achieved on average with ARCore anyway
+         *  For measuring widths along several meters (road widths), it is recommended to use 10 cm,
+         *  because a higher precision cannot be achieved on average with ARCore anyway
          *  and displaying the value in that precision may give a false sense that the measurement
          *  is that precise.
-         *  */
-        val precisionStep: Int? = null,
+         */
+        val precisionCm: Int? = null,
+        /** The precision in inches if lengthUnit = FOOT_AND_INCH to which the measure result is
+         *  rounded.
+         *
+         *  For measuring widths along several meters (road widths), it is recommended to use 4
+         *  inches, because a higher precision cannot be achieved on average with ARCore anyway and
+         *  displaying the value in that precision may give a false sense that the measurement is
+         *  that precise.
+         * */
+        val precisionInch: Int? = null,
         /** Whether to measure vertical instead of horizontal distances. */
         val measureVertical: Boolean = false,
         /** Custom measuring tape color as ARGB color int. Default is orange. */
@@ -47,7 +54,8 @@ class MeasureContract : ActivityResultContract<MeasureContract.Params, Length?>(
         intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK
         intent.putExtra("request_result", true)
         intent.putExtra("unit", unit)
-        intent.putExtra("precision_step", input.precisionStep)
+        intent.putExtra("precision_cm", input.precisionCm)
+        intent.putExtra("precision_inch", input.precisionInch)
         intent.putExtra("measure_vertical", input.measureVertical)
         intent.putExtra("measuring_tape_color", input.measuringTapeColor)
         return intent

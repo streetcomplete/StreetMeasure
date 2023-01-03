@@ -68,7 +68,9 @@ class MeasureActivity : AppCompatActivity(), Scene.OnUpdateListener {
     private var cursorNode: AnchorNode? = null
 
     private var measureVertical: Boolean = false
-    private var displayUnit: MeasureDisplayUnit = MeasureDisplayUnitMeter(1)
+    private var isFeetInch: Boolean = false
+    private var precisionCm: Int = 1
+    private var precisionInch: Int = 1
     private var isDisplayUnitFixed: Boolean = false
 
     private var requestResult: Boolean = false
@@ -78,6 +80,10 @@ class MeasureActivity : AppCompatActivity(), Scene.OnUpdateListener {
     private var measureState: MeasureState = MeasureState.READY
 
     private var distance: Double = 0.0
+
+    private val displayUnit: MeasureDisplayUnit get() =
+        if (isFeetInch) MeasureDisplayUnitFeetInch(precisionInch)
+        else MeasureDisplayUnitMeter(precisionCm)
 
     // taken from https://github.com/streetcomplete/countrymetadata/blob/master/data/lengthUnits.yml
     // in December 2022 (maybe things change in later years, especially in those tiny island countries)
@@ -176,7 +182,7 @@ class MeasureActivity : AppCompatActivity(), Scene.OnUpdateListener {
         measureVertical = intent.getBooleanExtra(PARAM_MEASURE_VERTICAL, measureVertical)
 
         val displayUnitStr = intent.getStringExtra(PARAM_UNIT)
-        val isFeetInch = when (displayUnitStr) {
+        isFeetInch = when (displayUnitStr) {
             UNIT_METER -> false
             UNIT_FOOT_AND_INCH -> true
             else -> prefs.getBoolean(
@@ -189,10 +195,8 @@ class MeasureActivity : AppCompatActivity(), Scene.OnUpdateListener {
             else -> false
         }
 
-        val precisionStep = intent.getIntExtra(PARAM_PRECISION_STEP, 1)
-        displayUnit =
-            if (isFeetInch) MeasureDisplayUnitFeetInch(precisionStep.coerceIn(1, 12))
-            else MeasureDisplayUnitMeter(precisionStep.coerceIn(1, 100))
+        precisionCm = intent.getIntExtra(PARAM_PRECISION_CM, 1).coerceIn(1, 100)
+        precisionInch = intent.getIntExtra(PARAM_PRECISION_INCH, 1).coerceIn(1, 12)
 
         val measuringTapeColorInt = intent.getIntExtra(PARAM_MEASURING_TAPE_COLOR, -1)
         measuringTapeColor = if (measuringTapeColorInt == -1) {
@@ -212,12 +216,9 @@ class MeasureActivity : AppCompatActivity(), Scene.OnUpdateListener {
 
     private fun toggleUnit() {
         binding.unitButtonImage.flip(150) {
-            displayUnit = when (displayUnit) {
-                is MeasureDisplayUnitFeetInch -> MeasureDisplayUnitMeter(1)
-                is MeasureDisplayUnitMeter -> MeasureDisplayUnitFeetInch(1)
-            }
+            isFeetInch = !isFeetInch
             prefs.edit {
-                putBoolean(PREF_IS_FT_IN, displayUnit is MeasureDisplayUnitFeetInch)
+                putBoolean(PREF_IS_FT_IN, isFeetInch)
             }
             updateMeasurementTextView()
             updateUnitButtonImage()
@@ -567,8 +568,8 @@ class MeasureActivity : AppCompatActivity(), Scene.OnUpdateListener {
         const val PARAM_MEASURE_VERTICAL = "measure_vertical"
 
         /** String. Specifies which unit should be used for display and result returned.
-            Either UNIT_METER or UNIT_FOOT_AND_INCH. If it is not defined, a unit is
-            selected based on the user's locale and he is able to switch between units
+         *  Either UNIT_METER or UNIT_FOOT_AND_INCH. If it is not defined, a unit is
+         *  selected based on the user's locale and he is able to switch between units
          */
         const val PARAM_UNIT = "unit"
 
@@ -577,19 +578,28 @@ class MeasureActivity : AppCompatActivity(), Scene.OnUpdateListener {
 
         /** Boolean. Whether this activity should return a result. If yes, the activity will return
          *  the measure result in RESULT_MEASURE_METERS or RESULT_MEASURE_FEET + RESULT_MEASURE_INCHES
-         *  */
+         */
         const val PARAM_REQUEST_RESULT = "request_result"
 
-        /** Int. The steps to which the measure result is rounded.
+        /** Int. The precision in centimeters if PARAM_UNIT = UNIT_METER to which the measure result
+         *  is rounded.
          *
-         *  If PARAM_UNIT = UNIT_METER, 1 is 1cm, 10 is 10cm.
-         *  If PARAM_UNIT = UNIT_FOOT_AND_INCH, 1 is 1in, 12 is 1ft.
-         *
-         *  For measuring widths along several meters (road widths), it is recommended to use 10cm
-         *  / 4 inches, because a higher precision cannot be achieved on average with ARCore anyway
+         *  For measuring widths along several meters (road widths), it is recommended to use 10 cm,
+         *  because a higher precision cannot be achieved on average with ARCore anyway
          *  and displaying the value in that precision may give a false sense that the measurement
-         *  is that precise. */
-        const val PARAM_PRECISION_STEP = "precision_step"
+         *  is that precise.
+         */
+        const val PARAM_PRECISION_CM = "precision_cm"
+
+        /** Int. The precision in inches if PARAM_UNIT = UNIT_FOOT_AND_INCH to which the measure
+         *  result is rounded.
+         *
+         *  For measuring widths along several meters (road widths), it is recommended to use 4
+         *  inches, because a higher precision cannot be achieved on average with ARCore anyway and
+         *  displaying the value in that precision may give a false sense that the measurement is
+         *  that precise.
+         * */
+        const val PARAM_PRECISION_INCH = "precision_inch"
 
         /** Int. Color value of the measuring tape. Default is orange.
          */
