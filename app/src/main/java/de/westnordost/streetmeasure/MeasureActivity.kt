@@ -280,11 +280,24 @@ class MeasureActivity : AppCompatActivity(), Scene.OnUpdateListener {
             hitResults.find { abs(it.hitPose.ty() - firstNode.worldPosition.y) < 0.1 }
         }
 
+        val cameraAngle = abs(normalizeRadians(frame.camera.displayOrientedPose.pitch.toDouble() + PI/2, -PI))
+        /* Display warning if the camera angle is more than 55° from the ground:
+
+           E.g. if the startpoint is placed 20cm above the ground (~kerb height) either because
+           ARCore initially wrongly assumes a different plane height or by user error (starting
+           to measure from sidewalk height but then to the lower end of the kerb on the other
+           side) and the phone is held in a height of 140cm, that's already a measurement error
+           of 20/140 / tan(90 - 55) = 20%
+           (at most, i.e. the distance of the users feet to the arrow)
+         */
+        setTrackingMessage(if (cameraAngle > PI/2 * 55/90) R.string.ar_core_tracking_error_no_plane_hit else null)
+
         if (hitResult != null) {
             updateCursor(hitResult)
-            setTrackingMessage(
-                if (measureState == MeasureState.READY) R.string.ar_core_tracking_hint_tap_to_measure else null
-            )
+
+            if (measureState == MeasureState.READY) {
+                setTrackingMessage(R.string.ar_core_tracking_hint_tap_to_measure)
+            }
         } else {
             /* when no plane can be found at the cursor position and the camera angle is
                shallow enough, display a hint that user should cross street
@@ -293,9 +306,9 @@ class MeasureActivity : AppCompatActivity(), Scene.OnUpdateListener {
                 Vector3.subtract(frame.camera.pose.position, it).length()
             } ?: 0f
 
-            setTrackingMessage(
-                if (cursorDistanceFromCamera > 3f) R.string.ar_core_tracking_error_no_plane_hit else null
-            )
+            if (cursorDistanceFromCamera > 3f) {
+                setTrackingMessage(R.string.ar_core_tracking_error_no_plane_hit)
+            }
         }
     }
 
