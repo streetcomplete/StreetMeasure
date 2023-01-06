@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="about_title_privacy_statement">"Изјава о приватности"</string>
     <string name="no_camera_permission_warning_title">"Дозволе за камеру"</string>
     <string name="no_camera_permission_warning">"Да бисте сликали фотографије и мерили раздаљине су потребне дозволе за камеру."</string>
     <string name="ar_core_error_sdk_too_old">"Апликација је престара, ажурирајте је."</string>
@@ -12,4 +13,9 @@
     <string name="ar_core_tracking_error_no_plane_hit">"Држите близу стрелице, али пазите на саобраћај!"</string>
     <string name="no_camera_permission_toast">"Нема дозвола за камеру"</string>
     <string name="ar_core_tracking_hint_tap_to_measure">"Додирните екран да почнете мерење"</string>
+    <string name="measure_info_title">"Постизање оптималне прецизности"</string>
+    <string name="measure_info_html_description">"&lt;p&gt;ARCore понекад (на почетку) претпоставља да је земља (тло, односно подлога) нешто нижа или виша него у стварности. Ово представља грешку у мерењу која постаје све већа како се телефон усмерава ка хоризонту.&lt;/p&gt;
+&lt;p&gt;Поставите почетну и крајњу тачку тако што ћете усмерити телефон право надоле (тако да белу стрелицу видите одозго) како бисте у потпуности избегли грешку хоризонталног мерења.&lt;/p&gt;
+&lt;p&gt;За вертикална мерења, потребно је да уместо тога проверите да ли се почетна тачка не помера у односу на земљу посматрајући је из различитих праваца.&lt;/p&gt;"</string>
+    <string name="privacy_html_arcore">"Ова апликација је базирана на &lt;a href=\"https://play.google.com/store/apps/details?id=com.google.ar.core\"&gt;Google Play услугама за AR&lt;/a&gt; (ARCore), које пружа компанија Google и регулисана је &lt;a href=\"https://policies.google.com/privacy\"&gt;Google Смерницама за приватност&lt;/a&gt;."</string>
 </resources>

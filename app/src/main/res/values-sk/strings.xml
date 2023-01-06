@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="about_title_privacy_statement">"Vyhlásenie o ochrane súkromia"</string>
     <string name="no_camera_permission_warning_title">"Povolenie pre fotoaparát"</string>
     <string name="no_camera_permission_warning">"Povolenie je nevyhnutné, aby bolo možné meranie vzdialenosti pomocou rozšírenej reality."</string>
     <string name="ar_core_error_sdk_too_old">"Táto aplikácia je príliš stará, skúste ju aktualizovať."</string>
@@ -12,4 +13,9 @@
     <string name="ar_core_tracking_error_no_plane_hit">"Držte sa bližšie k šípke, ale dávajte pozor na premávku!"</string>
     <string name="no_camera_permission_toast">"Žiadne povolenie pre fotoaparát"</string>
     <string name="ar_core_tracking_hint_tap_to_measure">"Dotkni sa pre začatie merania"</string>
+    <string name="measure_info_title">"Dosiahnutie optimálnej presnosti"</string>
+    <string name="measure_info_html_description">"&lt;p&gt;ARCore niekedy (spočiatku) predpokladá, že zem je o niečo nižšie alebo vyššie, než v skutočnosti je. To spôsobuje chybu merania, ktorá je tým väčšia, čím viac nakláňate telefón k horizontu.&lt;/p&gt;
+&lt;p&gt;Nastavte každý počiatočný a koncový bod, pričom telefón nasmerujte rovno nadol (tak, aby ste zvrchu videli bielu šípku), aby ste sa tomuto problému pri horizontálnych meraniach úplne vyhli.&lt;/p&gt;
+&lt;p&gt;Pri vertikálnych meraniach musíte namiesto toho skontrolovať, či počiatočný bod nie je paralaxe so zemou, a to tak, že sa naň pozriete z rôznych smerov.&lt;/p"</string>
+    <string name="privacy_html_arcore">"Táto aplikácia beží na &lt;a href=\"https://play.google.com/store/apps/details?id=com.google.ar.core\"&gt;Google Play Services for AR&lt;/a&gt; (ARCore), which is provided by Google and governed by the &lt;a href=\"https://policies.google.com/privacy\"&gt;Google Privacy Policy&lt;/a&gt;."</string>
 </resources>

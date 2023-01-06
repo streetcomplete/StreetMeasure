@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="about_title_privacy_statement">"Declaració de privadesa"</string>
     <string name="no_camera_permission_warning_title">"Permisos de càmera"</string>
     <string name="no_camera_permission_warning">"El permís és necessari per a poder mesurar distàncies amb realitat augmentada."</string>
     <string name="ar_core_error_sdk_too_old">"Aquesta aplicació és massa antiga, intenta a actualitzar."</string>
@@ -12,4 +13,9 @@
     <string name="ar_core_tracking_error_no_plane_hit">"Mantén més pròxim a la fletxa, però vigila amb el trànsit!"</string>
     <string name="no_camera_permission_toast">"No hi ha permís per a fer servir la càmera"</string>
     <string name="ar_core_tracking_hint_tap_to_measure">"Toca la pantalla per iniciar el mesurament"</string>
+    <string name="measure_info_title">"Aconseguint precisió òptima"</string>
+    <string name="measure_info_html_description">"&lt;p&gt;ARCore de vegades (inicialment) suposa que el sòl és una mica més baix o més alt del que és realment. Això introdueix un error de mesura que es fa més gran com més inclines el telèfon cap a l'horitzó.&lt;/p&gt;
+&lt;p&gt;Definiu cadascun el punt inicial i final mentre apunteu el telèfon cap avall (de manera que vegeu la fletxa blanca des de dalt) per evitar completament aquest problema amb les mesures horitzontals.&lt;/p&gt;
+&lt;p&gt;Per a mesuraments verticals, cal que comproveu que el punt d'inici sembla que no es mogui en relació amb el terra mirant-lo des de diferents direccions.&lt;/p&gt;"</string>
+    <string name="privacy_html_arcore">"Aquesta aplicació s'executa a &lt;a href=\"https://play.google.com/store/apps/details?id=com.google.ar.core\"&gt;Google Play Services for AR&lt;/a&gt; (ARCore), que el proporciona Google i es regeix per la &lt;a href=\"https://policies.google.com/privacy\"&gt;Política de privadesa de Google&lt;/a&gt;."</string>
 </resources>

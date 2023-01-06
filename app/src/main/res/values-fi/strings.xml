@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="about_title_privacy_statement">"Tietosuojalausunto"</string>
     <string name="no_camera_permission_warning_title">"Oikeudet kameraan"</string>
     <string name="no_camera_permission_warning">"Oikeudet tarvitaan kuvien ottamiseen ja etäisyyksien mittaamiseen kameran avulla."</string>
     <string name="ar_core_error_sdk_too_old">"Sovellusversio on vanha, päivitä sovellus."</string>
@@ -12,4 +13,9 @@
     <string name="ar_core_tracking_error_no_plane_hit">"Pysy lähempänä osoitinta mutta varo liikennettä!"</string>
     <string name="no_camera_permission_toast">"Kameran käyttöoikeutta ei ole"</string>
     <string name="ar_core_tracking_hint_tap_to_measure">"Täppää ruutua aloittaaksesi mittauksen"</string>
+    <string name="measure_info_title">"Saavutetaan optimaalinen tarkkuus"</string>
+    <string name="measure_info_html_description">"&lt;p&gt;Joskus ARCore saattaa (aluksi) olettaa maan olevan hieman todellisuutta alempana tai ylempänä. Tämä tuottaa mittausvirhettä, joka kasvaa sitä suuremmaksi, mitä enemmän kallistat puhelintasi kohti horisonttia.&lt;/p&gt;
+&lt;p&gt;Aseta sekä aloitus- että lopetuspiste osoittaen puhelimella suoraan alas (siten että näet valkoisen nuolen päältä) välttääksesi tämän vaakasuuntaisten mittauksien virheen.&lt;/p&gt;
+&lt;p&gt;Pystysuuntaisissa mittauksissa sinun pitää varmistaa, että aloituspiste ei näytä liikkuvan maahan nähden katsottaessa aloituspistettä eri suunnista.&lt;/p&gt;"</string>
+    <string name="privacy_html_arcore">"Tämä sovellus toimii käyttäen &lt;a href=\"https://play.google.com/store/apps/details?id=com.google.ar.core\"&gt;Google Play Services for AR:ää&lt;/a&gt; (ARCore), jonka tarjoaa Google ja siihen sovelletaan &lt;a href=\"https://policies.google.com/privacy\"&gt;Googlen tietosuojakäytäntöä&lt;/a&gt;."</string>
 </resources>

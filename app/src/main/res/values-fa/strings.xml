@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="about_title_privacy_statement">"بیانیهٔ حریم شخصی"</string>
     <string name="no_camera_permission_warning_title">"مجوز تصویربرداری"</string>
     <string name="no_camera_permission_warning">"این مجوز برای اندازه‌گیری مسافت‌ها از طریق واقعیت افزوده لازم است."</string>
     <string name="ar_core_error_sdk_too_old">"این برنامه بسیار قدیمی است، لطفاً بروزرسانی کنید."</string>
@@ -12,4 +13,9 @@
     <string name="ar_core_tracking_error_no_plane_hit">"به جهت‌یاب نزدیک‌تر شوید، اما مراقب عبور و مرور باشید!"</string>
     <string name="no_camera_permission_toast">"محدودیت تصویربرداری"</string>
     <string name="ar_core_tracking_hint_tap_to_measure">"برای شروع اندازه‌گیری، روی صفحه ضربه بزنید"</string>
+    <string name="measure_info_title">"دستیابی به دقت مطلوب"</string>
+    <string name="measure_info_html_description">"&lt;p&gt;ابزار توسعه واقعیت افزوده گوگل گاهی (در ابتدا) زمین را کمی پایین‌تر یا بالاتر از آنچه در واقعیت هست فرض می‌کند. این یک خطای اندازه‌گیری است که هر چه بیشتر گوشی خود را نسبت به افق کج کنید بزرگتر می‌شود.&lt;/p&gt;
+&lt;p&gt;در حالی که گوشی همراه را بصورت مستقیم به سمت پایین می‌گیرید نقاط شروع و پایان را تنظیم کنید (به طوری که فلش سفید را از بالا مشاهده کنید) تا کاملاً از این مشکل برای اندازه‌گیری‌های افقی جلوگیری به عمل آید.&lt;/p&gt;
+&lt;p&gt;برای اندازه‌گیری‌های عمودی، لازم است به طور چشمی بررسی کنید که از جهات مختلف، نقطه شروع نسبت به سطح زمین حرکتی نداشته باشد.&lt;/p&gt;"</string>
+    <string name="privacy_html_arcore">"این برنامه در &lt;a href=\"https://play.google.com/store/apps/details?id=com.google.ar.core\"&gt;سامانه خدمات بازار گوگل for AR&lt;/a&gt; (ARCore), توسط بازار گوگل ارائه شده و تحت پیوند زیر اجرا می شود &lt;a href=\"https://policies.google.com/privacy\"&gt;Google Privacy Policy&lt;/a&gt;."</string>
 </resources>

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="about_title_privacy_statement">"Déclaration sur la protection de la vie privée"</string>
     <string name="no_camera_permission_warning_title">"Permission d’accès à la caméra"</string>
     <string name="no_camera_permission_warning">"La permission est nécessaire pour prendre des photos et mesurer les distances en réalité augmentée."</string>
     <string name="ar_core_error_sdk_too_old">"Cette application est trop ancienne, essayez de la mettre à jour."</string>
@@ -12,4 +13,9 @@
     <string name="ar_core_tracking_error_no_plane_hit">"Restez proche de la flèche, mais faites attention à la circulation !"</string>
     <string name="no_camera_permission_toast">"Pas de permission pour l’appareil photo"</string>
     <string name="ar_core_tracking_hint_tap_to_measure">"Appuyez sur l’écran pour commencer la mesure"</string>
+    <string name="measure_info_title">"Améliorer la précision de mesure"</string>
+    <string name="measure_info_html_description">"&lt;p&gt;ARCore présume parfois (à l'initialisation) que le sol est plus bas ou plus haut qu'il ne l'est vraiment. Cela introduit une erreur de mesure qui s'accroit lorsque vous inclinez votre téléphone vers l'horizon.&lt;/p&gt;
+&lt;p&gt;Réglez les points de départ et de terminaison en pointant le téléphone vers le bas (de manière à voir la flèche blanche du dessus) pour remédier au problème pour les mesures horizontales.&lt;/p&gt;
+&lt;p&gt;Pour les mesures verticales, vous devez vérifier manuellement que le point de départ n'est pas en mouvement par rapport au sol, en regardant depuis des directions différentes.&lt;/p&gt;"</string>
+    <string name="privacy_html_arcore">"Cette application utilise les &lt;a href=\"https://play.google.com/store/apps/details?id=com.google.ar.core\"&gt;Services Google Play pour RA&lt;/a&gt; (ARCore), qui sont fournis par Google et sont soumis aux &lt;a href=\"https://policies.google.com/privacy\"&gt;règles de confidentialité de Google&lt;/a&gt;."</string>
 </resources>

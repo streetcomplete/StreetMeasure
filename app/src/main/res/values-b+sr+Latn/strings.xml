@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="about_title_privacy_statement">"Izjava o privatnosti"</string>
     <string name="no_camera_permission_warning_title">"Dozvole za kameru"</string>
     <string name="no_camera_permission_warning">"Da biste slikali fotografije i merili razdaljine su potrebne dozvole za kameru."</string>
     <string name="ar_core_error_sdk_too_old">"Aplikacija je prestara, ažurirajte je."</string>
@@ -9,7 +10,12 @@
     <string name="ar_core_tracking_error_insufficient_features">"Nedovoljno vizuelnih odlika ovde"</string>
     <string name="ar_core_tracking_error_camera_unavailable">"Neka druga aplikacija koristi kameru"</string>
     <string name="ar_core_tracking_error_too_steep_angle">"Previše strm ugao, odmaknite se"</string>
-    <string name="ar_core_tracking_error_no_plane_hit">"Držite blizu strelice, ali pazite na saobrać'aj!"</string>
+    <string name="ar_core_tracking_error_no_plane_hit">"Držite blizu strelice, ali pazite na saobraćaj!"</string>
     <string name="no_camera_permission_toast">"Nema dozvola za kameru"</string>
     <string name="ar_core_tracking_hint_tap_to_measure">"Dodirnite ekran da počnete merenje"</string>
+    <string name="measure_info_title">"Postizanje optimalne preciznosti"</string>
+    <string name="measure_info_html_description">"&lt;p&gt;ARCore ponekad (na početku) pretpostavlja da je zemlja (tlo, odnosno podloga) nešto niža ili viša nego u stvarnosti. Ovo predstavlja grešku u merenju koja postaje sve veća kako se telefon usmerava ka horizontu.&lt;/p&gt;
+&lt;p&gt;Postavite početnu i krajnju tačku tako što ćete usmeriti telefon pravo nadole (tako da belu strelicu vidite odozgo) kako biste u potpunosti izbegli grešku horizontalnog merenja.&lt;/p&gt;
+&lt;p&gt;Za vertikalna merenja, potrebno je da umesto toga proverite da li se početna tačka ne pomera u odnosu na zemlju posmatrajući je iz različitih pravaca.&lt;/p&gt;"</string>
+    <string name="privacy_html_arcore">"Ova aplikacija je bazirana na &lt;a href=\"https://play.google.com/store/apps/details?id=com.google.ar.core\"&gt;Google Play uslugama za AR&lt;/a&gt; (ARCore), koje pruža kompanija Google i regulisana je &lt;a href=\"https://policies.google.com/privacy\"&gt;Google Smernicama za privatnost&lt;/a&gt;."</string>
 </resources>

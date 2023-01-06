@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="about_title_privacy_statement">"Adatvédelmi nyilatkozat"</string>
     <string name="no_camera_permission_warning_title">"Kamera engedély"</string>
     <string name="no_camera_permission_warning">"Az engedély szükséges a kiterjesztett valósággal történő távolságméréshez."</string>
     <string name="ar_core_error_sdk_too_old">"Az alkalmazás túl régi, próbáld meg frissíteni."</string>
@@ -12,4 +13,9 @@
     <string name="ar_core_tracking_error_no_plane_hit">"Menj közelebb a nyílhoz, de vigyázz a forgalomra!"</string>
     <string name="no_camera_permission_toast">"Nincs hozzáférés a kamerához."</string>
     <string name="ar_core_tracking_hint_tap_to_measure">"Érintsd meg a képernyőt a mérés megkezdéséhez"</string>
+    <string name="measure_info_title">"Az optimális pontosság elérése"</string>
+    <string name="measure_info_html_description">"&lt;p&gt;AzARCore néha (kezdetben) feltételezi, hogy a talaj egy kicsit alacsonyabb vagy magasabb, mint amilyen valójában. Ez mérési hibát eredményez, amely annál nagyobb lesz, minél inkább a horizont felé döntöd a telefonodat.&lt;/p&gt;
+&lt;p&gt;A vízszintes méréseknél ennek a problémának a teljes kiküszöböléséhez állítsd be a kezdő- és végpontokat úgy, hogy közben a telefont egyenesen lefelé irányítod (úgy, hogy felülről a fehér nyilat lásd).&lt;/p&gt;
+&lt;p&gt;Függőleges méréseknél ehelyett azt ellenőrizd, hogy a kezdőpont nem mozdul-e el a talajhoz képest, ha különböző irányokból nézed.&lt;/p&gt;"</string>
+    <string name="privacy_html_arcore">"Ez az alkalmazás a &lt;a href=\"https://play.google.com/store/apps/details?id=com.google.ar.core\"&gt;Google Play Services for AR&lt;/a&gt; (ARCore) kiterjesztettvalóság-rendszeren fut, amelyet a Google biztosít, és amelyre a &lt;a href=\"https://policies.google.com/privacy\"&gt;Google adatvédelmi irányelvei&lt;/a&gt; vonatkoznak."</string>
 </resources>

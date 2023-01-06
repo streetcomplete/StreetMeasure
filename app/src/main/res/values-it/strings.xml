@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="about_title_privacy_statement">"Informativa sulla privacy"</string>
     <string name="no_camera_permission_warning_title">"Permessi della fotocamera"</string>
     <string name="no_camera_permission_warning">"I permessi sono necessari per poter misurare le distanze con la realtà aumentata."</string>
     <string name="ar_core_error_sdk_too_old">"Questa app è di una versione troppo vecchia, prova ad aggiornarla."</string>
@@ -12,4 +13,9 @@
     <string name="ar_core_tracking_error_no_plane_hit">"Avvicinati alla freccia ma attenzione al traffico!"</string>
     <string name="no_camera_permission_toast">"Accesso alla fotocamera mancante"</string>
     <string name="ar_core_tracking_hint_tap_to_measure">"Premi lo schermo per iniziare a misurare"</string>
+    <string name="measure_info_title">"Cerco la precisione ottimale"</string>
+    <string name="measure_info_html_description">"&lt;p&gt;ARCore alle volte (inizialmente) presuppone che il terreno sia un po' più in basso o un po' più in alto di quanto non sia realmente. Questo introduce un errore di misurazione che aumenta alzando il telefono verso l'orizzonte.&lt;/p&gt;
+&lt;p&gt;Imposta i punti di inizio e fine misurazione mentre hai il telefono verso terra (in modo da vedere la freccia bianca da sopra) per evitare questo errore nelle misure orizzontali.&lt;/p&gt;
+&lt;p&gt;Per le misurazioni verticali, devi fare attenzione che il punto d'inizio non sia parallaxo al terreno guardandolo da angolazioni differenti.&lt;/p&gt;"</string>
+    <string name="privacy_html_arcore">"Questa applicazione utilizza un &lt;a href=\"https://play.google.com/store/apps/details?id=com.google.ar.core\"&gt;servizio Google Play Services per la realtà aumentata&lt;/a&gt; (ARCore), fornito da Google e sottostante alla &lt;a href=\"https://policies.google.com/privacy\"&gt;Privacy policy di Google&lt;/a&gt;."</string>
 </resources>
