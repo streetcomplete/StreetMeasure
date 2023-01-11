@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="about_title_privacy_statement">"隱私聲明"</string>
+    <string name="no_camera_permission_warning_title">"相機權限"</string>
+    <string name="no_camera_permission_warning">"這權限是為了能拍照，用鏡頭來測量距離"</string>
+    <string name="ar_core_error_sdk_too_old">"這個 app 太舊了，請試著更新。"</string>
+    <string name="ar_core_tracking_error_bad_state">"發生問題了，請試著重新測量。"</string>
+    <string name="ar_core_tracking_error_insufficient_light">"這裡太暗了"</string>
+    <string name="ar_core_tracking_error_excessive_motion">"太多晃動了"</string>
+    <string name="ar_core_tracking_error_insufficient_features">"這裡沒有足夠的視覺圖徵"</string>
+    <string name="ar_core_tracking_error_camera_unavailable">"其他 app 已經使用鏡頭了"</string>
+    <string name="ar_core_tracking_error_too_steep_angle">"角度太陡了，請稍微離開一點"</string>
+    <string name="ar_core_tracking_error_no_plane_hit">"盡量靠近箭頭但小心路況！"</string>
+    <string name="no_camera_permission_toast">"沒有相機權限"</string>
+    <string name="ar_core_tracking_hint_tap_to_measure">"點一下螢幕來開始測量"</string>
+    <string name="measure_info_title">"達成最佳精確度"</string>
+    <string name="measure_info_html_description">"&lt;p&gt;ARCore 有時候 (一開始) 預設地面會低一點或是高一點，這會讓你越讓手機貼近水平線，測量的誤差變得比預期大。&lt;/p&gt;
+&lt;p&gt;設定每一次的開始 - 以及結束點，要將你手直直朝下 (因此你會在上面看到白色箭頭) 來完全避免水平測量的問題。&lt;/p&gt;
+&lt;p&gt;而垂直測量部分，你需要透過不同方向檢視，檢查開始點相較地面沒有跑掉。&lt;/p&gt;"</string>
+    <string name="privacy_html_arcore">"這應用程式 &lt;a href=\"https://play.google.com/store/apps/details?id=com.google.ar.core\"&gt;Google Play Services for AR&lt;/a&gt; (ARCore) 來運作，並且由 Google 採用 &lt;a href=\"https://policies.google.com/privacy\"&gt;Google 隱私政策&lt;/a&gt; 提供服務與管理。"</string>
+</resources>
