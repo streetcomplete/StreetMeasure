@@ -53,7 +53,7 @@ private fun PackageManager.isPackageInstalled(packageName: String): Boolean =
 
 - it is not available in Android versions below 7.0 and requires OpenGL ES 3.1
 - if not already installed, the measuring app is only available on Google Play store (not on 
-  F-Droid). So if neither of the two is installed, no point in showing it to the user as an option
+  F-Droid). So if neither of the two is installed, no point in showing it to the user as an option. It is of course possible to load the app from GitHub and also to sideload ARCore (="Google Play Services for AR") from some other more or less trustworthy source, but this is nothing the user could be led through automatically in the UI.
 
 If it returns true, it may still be the case that [his device is not supported](https://developers.google.com/ar/devices)
 but this is something we cannot check for at this point.
