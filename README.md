@@ -53,16 +53,16 @@ private fun PackageManager.isPackageInstalled(packageName: String): Boolean =
 
 - it is not available in Android versions below 7.0 and requires OpenGL ES 3.1
 - if not already installed, the measuring app is only available on Google Play store (not on 
-  F-Droid). So if neither of the two is installed, no point in showing it to the user as an option
+  F-Droid). So if neither of the two is installed, no point in showing it to the user as an option. It is of course possible to load the app from GitHub and also to sideload ARCore (="Google Play Services for AR") from some other more or less trustworthy source, but this is nothing the user could be led through automatically in the UI.
 
 If it returns true, it may still be the case that [his device is not supported](https://developers.google.com/ar/devices)
-but this is something we cannot check for at this point.
+but this is something you cannot check for at this point. The list of supported devices is not really publicly available directly from Google as a CSV and in any case is updated all the time, so getting the CSV one time from a third party and then not updating it is bound to break for new devices being added to the list.
 
-Do not forget to add `<package android:name="de.westnordost.streetmeasure"/>` and
+In any case, do not forget to add `<package android:name="de.westnordost.streetmeasure"/>` and
 `<package android:name="com.android.vending"/>` to the 
 [`<queries>`](https://developer.android.com/guide/topics/manifest/queries-element) block in your 
 Android manifest. In Android 11 onwards, it must be declared which packages the app should be
-capable of communicating with.
+capable of communicating with, otherwise the app may not find the app at all.
 
 ## License
 
