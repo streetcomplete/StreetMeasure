@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="about_title_privacy_statement">"Paziņojums par konfidencialitāti"</string>
+    <string name="no_camera_permission_warning_title">"Kameras novietojums"</string>
+    <string name="no_camera_permission_warning">"Ir nepieciešamas atļaujas, lai varētu uzņemt fotoattēlus un mērīt attālumus ar kameru."</string>
+    <string name="ar_core_error_sdk_too_old">"Lietotne ir pārāk veca, mēģiniet to atjaunināt."</string>
+    <string name="ar_core_tracking_error_bad_state">"Kaut kas nogāja greizi. Mēģiniet pārstartēt mērīšanu."</string>
+    <string name="ar_core_tracking_error_insufficient_light">"Šeit ir pārāk tumšs"</string>
+    <string name="ar_core_tracking_error_excessive_motion">"Pārāk daudz kustību"</string>
+    <string name="ar_core_tracking_error_insufficient_features">"Nepietiekami daudz vizuālo elementu"</string>
+    <string name="ar_core_tracking_error_camera_unavailable">"Kameru jau izmanto cita lietotne"</string>
+    <string name="ar_core_tracking_error_too_steep_angle">"Pārāk plats leņķis, paejiet nedaudz atpakaļ"</string>
+    <string name="ar_core_tracking_error_no_plane_hit">"Turies tuvāk bultai, bet sargies satiksmes!"</string>
+    <string name="no_camera_permission_toast">"Kamerai nav atļaujas"</string>
+    <string name="ar_core_tracking_hint_tap_to_measure">"Spiediet uz ekrāna, lai sāktu mērīt"</string>
+    <string name="measure_info_title">"Optimālas precizitātes sasniegšana"</string>
+    <string name="measure_info_html_description">"&lt;p&gt;APCore dažkārt (sākotnēji) pieņem, ka zeme ir nedaudz augstāk vai zemāk, nekā tā patiesībā ir. Tas rada mērījuma kļūdu, kas pieaug līdz ar tālruņa pagriešanu horizonta virzienā.&lt;/p&gt;
+&lt;p&gt;Iestatiet sākuma un beigu punktus, kamēr tālrunis rāda taisni un leju (tā, lai jūs redzētu balto bultu no augšpuses), lai pilnībā izvairītos no šīs horizontālo mērījumu problēmas.&lt;/p&gt;
+&lt;p&gt;Vertikāliem mērījumiem jums jāpārbauda, ka sākuma punkts nepārvietojas attiecībā pret zemi. To var izdarīt, skatoties no dažādiem virzieniem.&lt;/p&gt;"</string>
+    <string name="privacy_html_arcore">"Šī lietotne darbojas uz &lt;a href=\"https://play.google.com/store/apps/details?id=com.google.ar.core\"&gt;Google Play Services for AR&lt;/a&gt; (ARCore), ko nodrošina Google un tās darbību nosaka &lt;a href=\"https://policies.google.com/privacy\"&gt;Google privātuma politika&lt;/a&gt;."</string>
+</resources>

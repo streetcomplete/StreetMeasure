@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="about_title_privacy_statement">"Δήλωση Ιδιωτικότητας"</string>
+    <string name="no_camera_permission_warning_title">"Άδεια κάμερας"</string>
+    <string name="no_camera_permission_warning">"Η άδεια είναι απαραίτητη για να μπορούμε να μετράμε αποστάσεις με επαυξημένη πραγματικότητα."</string>
+    <string name="ar_core_error_sdk_too_old">"Αυτή η εφαρμογή είναι πολύ παλιά, δοκιμάστε ενημέρωση."</string>
+    <string name="ar_core_tracking_error_bad_state">"Κάτι πήγε στραβά. Δοκιμάστε να επανεκκινήσετε τη μέτρηση."</string>
+    <string name="ar_core_tracking_error_insufficient_light">"Πολύ σκοτεινά εδώ"</string>
+    <string name="ar_core_tracking_error_excessive_motion">"Πάρα πολύ κίνηση"</string>
+    <string name="ar_core_tracking_error_insufficient_features">"Ανεπαρκή οπτικά χαρακτηριστικά εδώ"</string>
+    <string name="ar_core_tracking_error_camera_unavailable">"Η κάμερα χρησιμοποιείται από άλλη εφαρμογή"</string>
+    <string name="ar_core_tracking_error_too_steep_angle">"Πολύ απότομη γωνία, απομακρυνθείτε λίγο"</string>
+    <string name="ar_core_tracking_error_no_plane_hit">"Μείνετε πιο κοντά στο βέλος αλλά προσέξτε την κυκλοφορία!"</string>
+    <string name="no_camera_permission_toast">"Δεν υπάρχει άδεια κάμερας"</string>
+    <string name="ar_core_tracking_hint_tap_to_measure">"Πατήστε την οθόνη για έναρξη μέτρησης"</string>
+    <string name="measure_info_title">"Επίτευξη βέλτιστης ακρίβειας"</string>
+    <string name="measure_info_html_description">"&lt;p&gt;Το ARCore μερικές φορές (αρχικά) υποθέτει ότι το έδαφος είναι λίγο χαμηλότερο ή υψηλότερο από ό,τι στην πραγματικά είναι. Αυτό εισάγει ένα σφάλμα μέτρησης που γίνεται μεγαλύτερο όσο περισσότερο γέρνετε το τηλέφωνό σας προς τον ορίζοντα.&lt;/p&gt;
+&lt;p&gt;Ρυθμίστε το σημείο έναρξης και τέλους ενώ στρέφετε το τηλέφωνο ευθεία προς τα κάτω (έτσι ώστε να βλέπετε το λευκό βέλος από πάνω) για να αποφύγετε εντελώς αυτό το ζήτημα για οριζόντιες μετρήσεις.&lt;/p&gt;
+&lt;p&gt;Για κάθετες μετρήσεις, πρέπει να ελέγξετε ότι το σημείο εκκίνησης δεν φαίνεται να μετακινείται σε σχέση με το έδαφος κοιτάζοντάς το από διαφορετικές κατευθύνσεις.&lt;/p&gt;"</string>
+    <string name="privacy_html_arcore">"Αυτή η εφαρμογή εκτελείται στο &lt;a href=\"https://play.google.com/store/apps/details?id=com.google.ar.core\"&gt;Υπηρεσίες Google Play για το AR&lt;/a&gt; (ARCore), το οποίο παρέχεται από την Google και διέπεται από την &lt;a href=\"https://policies.google.com/privacy\"&gt;Πολιτική απορρήτου της Google&lt;/a&gt;."</string>
+</resources>
