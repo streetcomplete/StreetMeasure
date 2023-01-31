@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="about_title_privacy_statement">"Sekretesspolicy"</string>
+    <string name="no_camera_permission_warning_title">"Kamerabehörighet"</string>
+    <string name="no_camera_permission_warning">"Behörigheten krävs för att kunna ta bilder och mäta avstånd med förstärkt verklighet."</string>
+    <string name="ar_core_error_sdk_too_old">"Appen är för gammal, försök att uppdatera."</string>
+    <string name="ar_core_tracking_error_bad_state">"Något gick fel. Försök att starta om inmätningen."</string>
+    <string name="ar_core_tracking_error_insufficient_light">"För mörkt här"</string>
+    <string name="ar_core_tracking_error_excessive_motion">"För mycket rörelse"</string>
+    <string name="ar_core_tracking_error_insufficient_features">"Otillräckligt antal synliga detaljer"</string>
+    <string name="ar_core_tracking_error_camera_unavailable">"Kameran används av en annan app"</string>
+    <string name="ar_core_tracking_error_too_steep_angle">"För brant vinkel, backa lite"</string>
+    <string name="ar_core_tracking_error_no_plane_hit">"Håll dig nära pilen men se upp för trafik!"</string>
+    <string name="no_camera_permission_toast">"Ingen kamerabehörighet"</string>
+    <string name="ar_core_tracking_hint_tap_to_measure">"Dutta på skärmen för att börja mäta"</string>
+    <string name="measure_info_title">"Uppnå optimal precision"</string>
+    <string name="measure_info_html_description">"&lt;p&gt;Ibland antar ARCore att marken (initialt) är lite högre eller lägre än vad den egentligen är. Det skapar en felmarginal som blir större ju mer du lutar mobilen mot horisonten.&lt;/p&gt;
+&lt;p&gt;Sätt därför start- och slutpunkter medan du lutar mobilen rakt ner (så att du ser den vita pilen ovanifrån) för att helt undvika detta felet för horisontella mätningar.&lt;/p&gt;
+&lt;p&gt;För att mäta vertikalt måste du istället kontrollera att startpunkten inte rör sig i relation till marken genom att titta på den från flera håll.&lt;/p&gt;"</string>
+    <string name="privacy_html_arcore">"Den här appen använder sig av &lt;a href=\"https://play.google.com/store/apps/details?id=com.google.ar.core\"&gt;Google Play-tjänster för AR&lt;/a&gt; (ARCore), som tillhandahålls av Google och styrs av &lt;a href=\"https://policies.google.com/privacy\"&gt;Googles integritetspolicy&lt;/a&gt;."</string>
+</resources>

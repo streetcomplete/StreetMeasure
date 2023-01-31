@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="about_title_privacy_statement">"Polityka prywatności"</string>
+    <string name="no_camera_permission_warning_title">"Dostęp do aparatu"</string>
+    <string name="no_camera_permission_warning">"To uprawnienie jest niezbędne do mierzenia odległości aparatem."</string>
+    <string name="ar_core_error_sdk_too_old">"Aplikacja jest nieaktualna. Spróbuj ją zaktualizować."</string>
+    <string name="ar_core_tracking_error_bad_state">"Coś poszło nie tak. Spróbuj ponowić pomiar."</string>
+    <string name="ar_core_tracking_error_insufficient_light">"Jest tu za ciemno"</string>
+    <string name="ar_core_tracking_error_excessive_motion">"Zbyt szybkie ruchy"</string>
+    <string name="ar_core_tracking_error_insufficient_features">"Tło jest zbyt jednolite"</string>
+    <string name="ar_core_tracking_error_camera_unavailable">"Inny program używa teraz aparatu"</string>
+    <string name="ar_core_tracking_error_too_steep_angle">"Zbyt ostry kąt, odsuń się nieco"</string>
+    <string name="ar_core_tracking_error_no_plane_hit">"Trzymaj się bliżej strzałki, ale uważaj na pojazdy!"</string>
+    <string name="no_camera_permission_toast">"Brak pozwolenia na dostęp do aparatu"</string>
+    <string name="ar_core_tracking_hint_tap_to_measure">"Dotknij ekranu, aby rozpocząć pomiar"</string>
+    <string name="measure_info_title">"Uzyskiwanie optymalnej precyzji"</string>
+    <string name="measure_info_html_description">"&lt;p&gt;ARCore niekiedy (na początku) uznaje, że ziemia znajduje się trochę niżej lub wyżej niż w rzeczywistości. Prowadzi to do błędu pomiaru, który staje się tym większy, im bardziej pochylasz telefon w stronę horyzontu.&lt;/p&gt;
+&lt;p&gt;Aby zapobiec problemowi przy pomiarze poziomym, ustawiaj każdy punkt początkowy i końcowy, kierując telefon prosto w dół (tak, aby widzieć białą strzałkę od góry).&lt;/p&gt;
+&lt;p&gt;W przypadku pomiarów pionowych, należy zamiast tego sprawdzić, czy punkt początkowy nie przesuwa się względem ziemi, patrząc na niego z różnych kierunków.&lt;/p&gt;"</string>
+    <string name="privacy_html_arcore">"Ta aplikacja wykorzystuje usługę &lt;a href=\"https://play.google.com/store/apps/details?id=com.google.ar.core\"&gt;Google Play Services for AR&lt;/a&gt; (ARCore), dostarczaną przez firmę Google, która objęta jest &lt;a href=\"https://policies.google.com/privacy\"&gt;Polityką Prywatności Google&lt;/a&gt;."</string>
+</resources>

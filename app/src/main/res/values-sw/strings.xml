@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="about_title_privacy_statement">"Taarifa ya faragha"</string>
+    <string name="no_camera_permission_warning_title">"Ruhusa ya kamera"</string>
+    <string name="no_camera_permission_warning">"Ruhusa inahitajika ili kupiga picha na kupima umbali kwa kamera."</string>
+    <string name="ar_core_error_sdk_too_old">"Programu hii ni ya zamani sana, ifanye iendane na wakati."</string>
+    <string name="ar_core_tracking_error_bad_state">"Hitilafu fulani imetokea. Jaribu kuanzisha upya kipimo."</string>
+    <string name="ar_core_tracking_error_insufficient_light">"Giza sana hapa"</string>
+    <string name="ar_core_tracking_error_excessive_motion">"Harakati nyingi sana"</string>
+    <string name="ar_core_tracking_error_insufficient_features">"Uoni wa vitu hautoshelezi hapa"</string>
+    <string name="ar_core_tracking_error_camera_unavailable">"Kamera inatumiwa na programu nyingine"</string>
+    <string name="ar_core_tracking_error_too_steep_angle">"Mteremko mkali sana, rudi nyuma kidog"</string>
+    <string name="ar_core_tracking_error_no_plane_hit">"Ekaa karibu na mshale lakini angalia kwa makini barabarani"</string>
+    <string name="no_camera_permission_toast">"kamera hairuhusiwi"</string>
+    <string name="ar_core_tracking_hint_tap_to_measure">"Gusa kioo ili kuanza kupima"</string>
+    <string name="measure_info_title">"
+Kufikia usahihi wa hali ya juu"</string>
+    <string name="measure_info_html_description">"&lt;p&gt;ARCore wakati mwingine (mwanzoni) huchukulia ardhi kuwa chini kidogo au juu zaidi kuliko ilivyo mwanzo. Hii inasababisha kutopatika vipimo kwa usahihi ambayo hupatikana kwa wingi kadri unavyoelekeza simu yako kwenye upeo wa macho.&lt;/p&gt;
+&lt;p&gt;Weka kila sehemu ya kuanzia na ya mwisho huku ukielekeza simu chini moja kwa moja (ili uone mshale mweupe kutoka juu) ili kuepuka kabisa suala hili kwa vipimo vya mlalo.&lt;/p&gt;
+&lt;p&gt;Kwa vipimo vya wima, unahitaji badala yake kuangalia kama sehemu ya kuanzia haionekani kusogea kuhusiana na ardhi kwa kuiangalia kutoka pande tofauti.&lt;/p&gt;"</string>
+    <string name="privacy_html_arcore">"Programu hii inaendeshwa ndani ya &lt;a href=\"https://play.google.com/store/apps/details?id=com.google.ar.core\"&gt;Huduma za Google Play kwa huduma za AR&lt;/a&gt; (ARCore), ambayo hutolewa na Google na kusimamiwa na &lt;a href=\"https://policies.google.com/privacy\"&gt;Sera ya Faragha ya Google&lt;/a&gt;."</string>
+</resources>
