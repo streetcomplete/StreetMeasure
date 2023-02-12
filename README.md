@@ -19,7 +19,7 @@ on how to do this generally.
 
 A type-safe `ActivityResultContract` interface is available at [MeasureContract.kt](https://github.com/streetcomplete/StreetMeasure/blob/master/app/src/main/java/de/westnordost/streetmeasure/MeasureContract.kt), you can just copy it.
 
-Alternatively, consult the [documentation in the code](https://github.com/streetcomplete/StreetMeasure/blob/master/app/src/main/java/de/westnordost/streetmeasure/MeasureActivity.kt#L577-L630) which raw parameters are available and what is returned in the result
+Alternatively, consult the [documentation in the code](https://github.com/streetcomplete/StreetMeasure/blob/master/app/src/main/java/de/westnordost/streetmeasure/MeasureActivity.kt#L577-L633) which raw parameters are available and what is returned in the result
 `Intent` if you want to do it the old way with [`Activity.startActivityForResult`](https://developer.android.com/reference/android/app/Activity#startActivityForResult(android.content.Intent,%20int)).
 
 In either case, do not forget to cover the likely case that the measure app is not installed yet, 
