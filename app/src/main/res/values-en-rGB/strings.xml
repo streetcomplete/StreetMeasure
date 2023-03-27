@@ -2,7 +2,7 @@
 <resources>
     <string name="about_title_privacy_statement">"Privacy statement"</string>
     <string name="no_camera_permission_warning_title">"Camera permission"</string>
-    <string name="no_camera_permission_warning">"The permission is required to take photos and measure distances with the camera."</string>
+    <string name="no_camera_permission_warning">"The permission is required to measure distances with the camera."</string>
     <string name="ar_core_error_sdk_too_old">"This app is too old, try updating."</string>
     <string name="ar_core_tracking_error_bad_state">"Something went wrong. Try restarting the measuring."</string>
     <string name="ar_core_tracking_error_insufficient_light">"Too dark here"</string>

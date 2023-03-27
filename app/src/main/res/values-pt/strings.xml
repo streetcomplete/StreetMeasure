@@ -2,7 +2,7 @@
 <resources>
     <string name="about_title_privacy_statement">"Declaração de privacidade"</string>
     <string name="no_camera_permission_warning_title">"Permissão da câmara"</string>
-    <string name="no_camera_permission_warning">"A permissão é necessária para fotografar ou medir distâncias com a câmara."</string>
+    <string name="no_camera_permission_warning">"A permissão é necessária para medir distâncias com a câmara."</string>
     <string name="ar_core_error_sdk_too_old">"Esta aplicação é demasiado antiga, tente atualizá-la-"</string>
     <string name="ar_core_tracking_error_bad_state">"Algo correu mal. Tente recomeçar a medição."</string>
     <string name="ar_core_tracking_error_insufficient_light">"Está demasiado escuro aqui"</string>

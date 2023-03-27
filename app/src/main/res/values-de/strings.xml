@@ -2,7 +2,7 @@
 <resources>
     <string name="about_title_privacy_statement">"Datenschutzerklärung"</string>
     <string name="no_camera_permission_warning_title">"Kamerazugriff"</string>
-    <string name="no_camera_permission_warning">"Die Berechtigung wird benötigt, um Fotos zu machen und Abstände mit der Kamera zu messen."</string>
+    <string name="no_camera_permission_warning">"Die Berechtigung wird benötigt, um Abstände mit der Kamera zu messen."</string>
     <string name="ar_core_error_sdk_too_old">"Die App ist zu alt, versuche zu aktualisieren."</string>
     <string name="ar_core_tracking_error_bad_state">"Etwas hat nicht geklappt. Versuche die Messung neu zu starten."</string>
     <string name="ar_core_tracking_error_insufficient_light">"Zu dunkel hier"</string>

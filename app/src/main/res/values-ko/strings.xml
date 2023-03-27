@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="about_title_privacy_statement">"개인정보 보호방침"</string>
+    <string name="no_camera_permission_warning_title">"카메라 권한 필요"</string>
+    <string name="no_camera_permission_warning">"사진을 찍고 카메라로 거리 측정을 위해서는 권한이 필요합니다."</string>
+    <string name="ar_core_error_sdk_too_old">"이 앱은 너무 오래되었습니다, 업데이트하세요."</string>
+    <string name="ar_core_tracking_error_bad_state">"문제 발생. 측정을 다시 시도하세요."</string>
+    <string name="ar_core_tracking_error_insufficient_light">"너무 어두움"</string>
+    <string name="ar_core_tracking_error_excessive_motion">"움직임 심함"</string>
+    <string name="ar_core_tracking_error_insufficient_features">"시각적 지표 부족"</string>
+    <string name="ar_core_tracking_error_camera_unavailable">"다른 앱이 카메라 사용 중"</string>
+    <string name="ar_core_tracking_error_too_steep_angle">"기울기 너무 큼, 멀어지세요"</string>
+    <string name="ar_core_tracking_error_no_plane_hit">"교통 흐름에 주의하며 화살표에 가까이 가세요!"</string>
+    <string name="no_camera_permission_toast">"카메라 권한 없음"</string>
+    <string name="ar_core_tracking_hint_tap_to_measure">"측정을 위해 화면을 누르세요"</string>
+    <string name="measure_info_title">"최적의 정밀도 달성"</string>
+    <string name="measure_info_html_description">"&lt;p&gt;ARCore는 때때로 (처음에) 접지가 실제보다 약간 낮거나 높다고 가정합니다. 이로 인해 휴대전화를 수평선 쪽으로 기울일수록 측정 오차가 커집니다.&lt;/p&gt;
+&lt;p&gt;수평 측정 시 이 문제를 완전히 방지하려면 휴대전화를 똑바로 아래로 향하게 하여(위에서 흰색 화살표가 보이도록) 각각의 시작점과 끝점을 설정하세요.&lt;/p&gt;
+&lt;p&gt;수직 측정의 경우 대신 다른 방향에서 바라보면서 시작점이 지면과 관련하여 움직이지 않는지 확인해야 합니다.&lt;/p&gt;"</string>
+    <string name="privacy_html_arcore">"이 애플리케이션은 &lt;a href=\"https://play.google.com/store/apps/details?id=com.google.ar.core\"&gt;AR용 Google Play 서비스&lt;/a&gt;(ARCore)에서 실행됩니다. Google에서 제공하며 &lt;a href=\"https://policies.google.com/privacy\"&gt;Google 개인정보처리방침&lt;/a&gt;이 적용됩니다."</string>
+</resources>

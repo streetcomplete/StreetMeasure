@@ -13,7 +13,7 @@
     <string name="ar_core_tracking_error_no_plane_hit">"Avvicinati alla freccia ma attenzione al traffico!"</string>
     <string name="no_camera_permission_toast">"Accesso alla fotocamera mancante"</string>
     <string name="ar_core_tracking_hint_tap_to_measure">"Premi lo schermo per iniziare a misurare"</string>
-    <string name="measure_info_title">"Cerco la precisione ottimale"</string>
+    <string name="measure_info_title">"Ottenere la precisione ottimale"</string>
     <string name="measure_info_html_description">"&lt;p&gt;ARCore talvolta rileva (inizialmente) il terreno ad una distanza leggermente maggiore o minore di quella reale, introducendo così un errore di misurazione il quale aumenta man mano che si ruota il telefono verso l'orizzonte.&lt;/p&gt;
 &lt;p&gt;Per evitare questo tipo di errori nelle misurazioni orizzontali, imposta i punti di inizio e fine con il telefono rivolto esattamente verso il basso (in modo da vedere la freccia bianca dall'alto).&lt;/p&gt;
 &lt;p&gt;Per le misurazioni verticali, invece, controlla che il punto d'inizio sia fisso rispetto al terreno guardandolo da angolazioni differenti.&lt;/p&gt;"</string>
