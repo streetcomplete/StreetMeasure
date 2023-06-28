@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="about_title_privacy_statement">"Declaración de privacidad"</string>
+    <string name="no_camera_permission_warning_title">"Permiso de cámara"</string>
+    <string name="no_camera_permission_warning">"El permiso es necesario para poder hacer fotos y medir distancias con la cámara."</string>
+    <string name="ar_core_error_sdk_too_old">"Esta app es demasiado antigua, intenta actualizarla."</string>
+    <string name="ar_core_tracking_error_bad_state">"Algo salió mal. Intente reiniciar la medición."</string>
+    <string name="ar_core_tracking_error_insufficient_light">"Demasiado oscuro"</string>
+    <string name="ar_core_tracking_error_excessive_motion">"Demasiado movimiento"</string>
+    <string name="ar_core_tracking_error_insufficient_features">"Características visuales insuficientes"</string>
+    <string name="ar_core_tracking_error_camera_unavailable">"Otra aplicación está utilizando la cámara"</string>
+    <string name="ar_core_tracking_error_too_steep_angle">"Ángulo demasiado pronunciado, aléjate un poco"</string>
+    <string name="ar_core_tracking_error_no_plane_hit">"¡Manténgase más cerca de la flecha pero tenga cuidado con el tráfico!"</string>
+    <string name="no_camera_permission_toast">"Sin permiso de cámara"</string>
+    <string name="ar_core_tracking_hint_tap_to_measure">"Toque la pantalla para comenzar a medir"</string>
+    <string name="measure_info_title">"Consiguiendo una precisión óptima"</string>
+    <string name="measure_info_html_description">"&lt;p&gt;ARCore en ocasiones (de forma inicial) presume que el suelo está un poco más bajo o más alto de lo que realmente está. Esto provoca un error de medición que aumenta cuanto más se inclina el teléfono hacia el horizonte.
+&lt;p&gt;Establezca tanto el punto inicial como el final mientras apunta el teléfono directamente hacia abajo (de modo que vea la flecha blanca desde arriba) para evitar por completo este problema en las mediciones horizontales.&lt;/p&gt;
+&lt;p&gt;Para las mediciones verticales, debe comprobar que el punto de inicio no parece moverse en relación con el suelo mirándolo desde diferentes direcciones.&lt;/p&gt;"</string>
+    <string name="privacy_html_arcore">"Esta aplicación se ejecuta en &lt;a href=\"https://play.google.com/store/apps/details?id=com.google.ar.core\"&gt;Google Play Services for AR&lt;/a&gt; (ARCore), que es proporcionado por Google y se rige por la &lt;a href=\"https://policies.google.com/privacy\"&gt;Política de privacidad de Google&lt;/a&gt;."</string>
+</resources>

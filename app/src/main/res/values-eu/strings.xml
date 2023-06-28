@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="about_title_privacy_statement">"Pribatutasun adierazpena"</string>
+    <string name="no_camera_permission_warning_title">"Kameraren baimena"</string>
+    <string name="no_camera_permission_warning">"Baimena behar da argazkiak atera ahal izateko eta kamerarekin distantziak neurtzeko."</string>
+    <string name="ar_core_error_sdk_too_old">"Aplikazio hau zaharregia da, saiatu eguneratzen."</string>
+    <string name="ar_core_tracking_error_bad_state">"Zerbait gaizki joan da. Saiatu neurketa berrabiarazten."</string>
+    <string name="ar_core_tracking_error_insufficient_light">"Ilunegia hemen"</string>
+    <string name="ar_core_tracking_error_excessive_motion">"Mugimendu gehiegi"</string>
+    <string name="ar_core_tracking_error_insufficient_features">"ikusgaitasun nahikorik ez hemen"</string>
+    <string name="ar_core_tracking_error_camera_unavailable">"Kamera beste aplikazio bat erabiltzen ari da"</string>
+    <string name="ar_core_tracking_error_too_steep_angle">"Oso aldapatsua, aldendu pixka bat"</string>
+    <string name="ar_core_tracking_error_no_plane_hit">"Mantendu gezitik gertuago baina kontuz trafikoarekin!"</string>
+    <string name="no_camera_permission_toast">"Ez dago kameraren baimenik"</string>
+    <string name="ar_core_tracking_hint_tap_to_measure">"Sakatu pantaila hasteko idazten"</string>
+    <string name="measure_info_title">"Zehaztasun optimoa lortzea"</string>
+    <string name="measure_info_html_description">"&lt;p&gt;ARCore-k batzuetan (hasieran) lurra orain dagoena baino pixka bat beherago edo altuagoa zegoela suposatzen du. Honek neurketa-errore bat sartzen du, telefonoa zenbat eta gehiago okertu horizonterantz handiagoa dena.&lt;/p&gt;
+&lt;p&gt;Ezarri bakoitza hasierako eta amaierako puntua telefonoa zuzenean beherantz zuzentzen duzun bitartean (gezi zuria goitik ikus dezazun) neurketa horizontaletan arazo hau guztiz saihesteko.&lt;/p&gt;
+&lt;p&gt;Neurketa bertikalak egiteko, abiapuntua lurrarekiko ez dela higitzen egiaztatu behar duzu norabide ezberdinetatik begiratuz.&lt;/p&gt;"</string>
+    <string name="privacy_html_arcore">"Aplikazio hau &lt;a href=\"https://play.google.com/store/apps/details?id=com.google.ar.core\"&gt;Google Play Services for AR&lt;/a&gt; (ARCore) aplikazioan exekutatzen da. Google-k eskaintzen du eta &lt;a href=\"https://policies.google.com/privacy\"&gt;Google Pribatutasun-gidalerroek&lt;/a&gt; arautzen dute."</string>
+</resources>

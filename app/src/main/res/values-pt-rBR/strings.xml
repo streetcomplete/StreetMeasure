@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="about_title_privacy_statement">"Declaração de privacidade"</string>
+    <string name="no_camera_permission_warning_title">"Permissão da câmera"</string>
+    <string name="no_camera_permission_warning">"A permissão é solicitada para medir distâncias com a câmera."</string>
+    <string name="ar_core_error_sdk_too_old">"Este aplicativo é muito antigo, tente atualizar."</string>
+    <string name="ar_core_tracking_error_bad_state">"Algo deu errado. Tente reiniciar a medição."</string>
+    <string name="ar_core_tracking_error_insufficient_light">"Muito escuro aqui"</string>
+    <string name="ar_core_tracking_error_excessive_motion">"Muito movimento"</string>
+    <string name="ar_core_tracking_error_insufficient_features">"Recursos visuais insuficientes aqui"</string>
+    <string name="ar_core_tracking_error_camera_unavailable">"A câmera é usada por outro app"</string>
+    <string name="ar_core_tracking_error_too_steep_angle">"Ângulo muito íngreme, afaste-se um pouco"</string>
+    <string name="ar_core_tracking_error_no_plane_hit">"Mantenha-se mais perto da seta, mas cuidado com o trânsito!"</string>
+    <string name="no_camera_permission_toast">"Proibido filmar ou fotografar"</string>
+    <string name="ar_core_tracking_hint_tap_to_measure">"Toque na tela para começar a medir"</string>
+    <string name="measure_info_title">"Alcançando a precisão ideal"</string>
+    <string name="measure_info_html_description">"&lt;p&gt;ARCore às vezes (inicialmente) presume que o solo é um pouco mais baixo ou mais alto do que a realidade. Isto ocasiona um erro de medição que fica maior quanto mais inclinar o telefone em direção ao horizonte.&lt;/p&gt;
+&lt;p&gt;Defina tanto o ponto inicial quanto o final enquanto aponta o telefone diretamente para baixo (para que veja a flecha branca por cima) para evitar completamente esta questão em medições horizontais.&lt;/p&gt;
+&lt;p&gt;Para medições verticais, em vez disso, é necessário verificar que o ponto inicial não pareça se movimentar em relação ao solo, olhando para ele de diferentes direções.&lt;/p&gt;"</string>
+    <string name="privacy_html_arcore">"Este aplicativo é executado no &lt;a href=\"https://play.google.com/store/apps/details?id=com.google.ar.core\"&gt;Google Play Services para RA&lt;/a&gt; (ARCore), que é fornecido pelo Google e regido pela &lt;a href=\"https://policies.google.com/privacy\"&gt;Política de Privacidade do Google&lt;/a&gt;."</string>
+</resources>

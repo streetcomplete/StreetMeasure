@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="about_title_privacy_statement">"Заявление о конфиденциальности"</string>
+    <string name="no_camera_permission_warning_title">"Необходимо разрешение на использование камеры"</string>
+    <string name="no_camera_permission_warning">"Разрешение нужно для того, чтобы делать картинки и для измерения дистанции с помощью камеры."</string>
+    <string name="ar_core_error_sdk_too_old">"Это приложение устарело, попробуйте обновить."</string>
+    <string name="ar_core_tracking_error_bad_state">"Что-то пошло не так. Попробуйте перезапустить измерение."</string>
+    <string name="ar_core_tracking_error_insufficient_light">"Слишком темно"</string>
+    <string name="ar_core_tracking_error_excessive_motion">"Слишком много движений"</string>
+    <string name="ar_core_tracking_error_insufficient_features">"Здесь мало визуальных функций"</string>
+    <string name="ar_core_tracking_error_camera_unavailable">"Камера используется другим приложением"</string>
+    <string name="ar_core_tracking_error_too_steep_angle">"Слишком крутой угол, немного отойдите"</string>
+    <string name="ar_core_tracking_error_no_plane_hit">"Будьте ближе к дороге, но следите за трафиком!
+"</string>
+    <string name="no_camera_permission_toast">"Отсутствует разрешение на использование камеры"</string>
+    <string name="ar_core_tracking_hint_tap_to_measure">"Прикоснитесь к экрану для начала измерений"</string>
+    <string name="measure_info_title">"Достижение оптимальной точности"</string>
+    <string name="measure_info_html_description">"&lt;p&gt;ARCore иногда (в начале) предполагает, что земля немного ниже или выше, чем на самом деле. Это приводит к ошибке измерения, которая увеличивается, когда вы наклоняете телефон к горизонту.&lt;/p&gt; &lt;p&gt;Установите начальную и конечную точки, указывая телефон прямо внизу (чтобы видеть белую стрелку сверху), чтобы полностью избежать этой проблемы для горизонтальных измерений.&lt;/p&gt; &lt;p&gt;Для вертикальных измерений вам нужно вместо этого проверить, не кажется ли стартовая точка движущейся относительно земли, смотря на нее с разных направлений.&lt;/p&gt;"</string>
+    <string name="privacy_html_arcore">"Данное приложение использует &lt;a href=\"https://play.google.com/store/apps/details?id=com.google.ar.core\"&gt;сервисы Google Play для дополненной реальности&lt;/a&gt; (ARCore), предоставленные Google в соответствии с &lt;a href=\"https://policies.google.com/privacy\"&gt;политикой приватности Google&lt;/a&gt;."</string>
+</resources>

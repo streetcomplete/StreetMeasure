@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="about_title_privacy_statement">"Заява пра канфідэнцыйнасць"</string>
+    <string name="no_camera_permission_warning_title">"Неабходны дазвол на выкарыстанне камеры"</string>
+    <string name="no_camera_permission_warning">"Для вымярэння адлегласцей камерай патрабуецца дазвол."</string>
+    <string name="ar_core_error_sdk_too_old">"Гэты дадатак састарэў, паспрабуйце абнавіць."</string>
+    <string name="ar_core_tracking_error_bad_state">"Нешта пайшло не так. Паспрабуйце перазапусціць вымярэнне."</string>
+    <string name="ar_core_tracking_error_insufficient_light">"Занадта цёмна"</string>
+    <string name="ar_core_tracking_error_excessive_motion">"Занадта шмат рухаў"</string>
+    <string name="ar_core_tracking_error_insufficient_features">"Тут мала візуальных функцый"</string>
+    <string name="ar_core_tracking_error_camera_unavailable">"Камера выкарыстоўваецца іншым дадаткам"</string>
+    <string name="ar_core_tracking_error_too_steep_angle">"Занадта круты вугал, крыху адыдзіце"</string>
+    <string name="ar_core_tracking_error_no_plane_hit">"Будзьце бліжэй да дарогі, але сачыце за трафікам!
+"</string>
+    <string name="no_camera_permission_toast">"Адсутнічае дазвол на выкарыстанне камеры"</string>
+    <string name="ar_core_tracking_hint_tap_to_measure">"Дакраніцеся да экрана для пачатку вымярэнняў"</string>
+    <string name="measure_info_title">"Дасягненне аптымальнай дакладнасці"</string>
+    <string name="measure_info_html_description">"&lt;p&gt;ARCore часам (у пачатку) мяркуе, што зямля крыху ніжэй або вышэй, чым на самай справе. Гэта прыводзіць да памылкі вымярэння, якая павялічваецца, калі вы нахіляе тэлефон да гарызонту.&lt;/p&gt; &lt;p&gt;Усталюйце пачатковую і канчатковую кропкі, паказваючы тэлефон прама ўнізе (каб бачыць белую стрэлку зверху), каб цалкам пазбегнуць гэтай праблемы для гарызантальных вымярэнняў. &lt;/p&gt; &lt;p&gt;Для вертыкальных вымярэнняў вам трэба замест гэтага праверыць, ці не рухаецца стартавая кропка адносна зямлі, гледзячы на яе з розных кірункаў.&lt;/p&gt;"</string>
+    <string name="privacy_html_arcore">"Дадзенае прыкладанне выкарыстоўвае &lt;a href=\"https://play.google.com/store/apps/details?id=com.google.ar.core\"&gt;сэрвісы Google Play для дапоўненай рэальнасці&lt;/a&gt; (ARCore), прадстаўленыя Google у адпаведнасці з &lt;a href=\"https://policies.google.com/privacy\"&gt;палітыкай прыватнасці Google&lt;/a&gt;."</string>
+</resources>
