@@ -1,6 +1,9 @@
 package de.westnordost.streetmeasure
 
+import android.content.Context
 import android.content.Intent
+import android.hardware.camera2.CameraCharacteristics
+import android.hardware.camera2.CameraManager
 import android.os.Bundle
 import android.os.PersistableBundle
 import android.util.Log
@@ -12,6 +15,7 @@ import androidx.activity.SystemBarStyle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.edit
+import androidx.core.content.getSystemService
 import androidx.core.view.isGone
 import androidx.core.view.isInvisible
 import androidx.lifecycle.lifecycleScope
@@ -70,6 +74,7 @@ class MeasureActivity : AppCompatActivity(), Scene.OnUpdateListener {
 
     private var measureVertical: Boolean = false
     private var isFeetInch: Boolean = false
+    private var isFlashOn: Boolean = false
     private var precisionCm: Int = 1
     private var precisionInch: Int = 1
     private var isDisplayUnitFixed: Boolean = false
@@ -118,16 +123,19 @@ class MeasureActivity : AppCompatActivity(), Scene.OnUpdateListener {
 
         binding.directionButton.isGone = requestResult
         binding.unitButton.isGone = isDisplayUnitFixed
+        binding.flashButton.isGone = true
 
         updateDirectionButtonEnablement()
         updateDirectionButtonImage()
         updateUnitButtonImage()
+        updateFlashButtonImage()
 
         binding.startOverButton.setOnClickListener { clearMeasuring() }
         binding.acceptButton.setOnClickListener { returnMeasuringResult() }
 
         binding.directionButton.setOnClickListener { toggleDirection() }
         binding.unitButton.setOnClickListener { toggleUnit() }
+        binding.flashButtonImage.setOnClickListener { toggleFlash() }
 
         binding.infoButton.setOnClickListener { InfoDialog(this).show() }
 
@@ -225,6 +233,12 @@ class MeasureActivity : AppCompatActivity(), Scene.OnUpdateListener {
         binding.measurementTextView.flip(150)
     }
 
+    private fun toggleFlash() {
+        isFlashOn = !isFlashOn
+        enableFlashMode(isFlashOn)
+        updateFlashButtonImage()
+    }
+
     private fun updateDirectionButtonEnablement() {
         binding.directionButton.isEnabled = measureState != MeasureState.MEASURING
     }
@@ -238,6 +252,13 @@ class MeasureActivity : AppCompatActivity(), Scene.OnUpdateListener {
             is MeasureDisplayUnitFeetInch -> R.drawable.ic_foot_24
             is MeasureDisplayUnitMeter ->    R.drawable.ic_meter_24
         })
+    }
+
+    private fun updateFlashButtonImage() {
+        binding.flashButtonImage.setImageResource(
+            if (isFlashOn) R.drawable.ic_flashlight_on_24
+            else R.drawable.ic_flashlight_off_24
+        )
     }
 
     /* --------------------------------- Scene.OnUpdateListener --------------------------------- */
@@ -323,6 +344,7 @@ class MeasureActivity : AppCompatActivity(), Scene.OnUpdateListener {
         val result = createArCoreSession()
         if (result is ArCoreSessionCreator.Success) {
             val session = result.session
+            updateIsFlashAvailable(session)
             configureSession(session)
             addArSceneView(session)
         } else if (result is ArCoreSessionCreator.Failure) {
@@ -341,6 +363,10 @@ class MeasureActivity : AppCompatActivity(), Scene.OnUpdateListener {
         }
     }
 
+    private fun updateIsFlashAvailable(session: Session) {
+        binding.flashButton.isGone = !isFlashAvailable(session.cameraConfig.cameraId)
+    }
+
     private fun configureSession(session: Session) {
         val config = Config(session)
 
@@ -351,9 +377,25 @@ class MeasureActivity : AppCompatActivity(), Scene.OnUpdateListener {
         config.cloudAnchorMode = Config.CloudAnchorMode.DISABLED
         config.instantPlacementMode = Config.InstantPlacementMode.DISABLED
         config.lightEstimationMode = Config.LightEstimationMode.DISABLED
+        config.flashMode = if (isFlashOn) Config.FlashMode.TORCH else Config.FlashMode.OFF
+        session.configure(config)
 
+        session.cameraConfig.cameraId
+    }
+
+    private fun enableFlashMode(enable: Boolean) {
+        val session = arSceneView?.session ?: return
+        val config = session.config
+        config.flashMode = if (enable) Config.FlashMode.TORCH else Config.FlashMode.OFF
         session.configure(config)
     }
+
+    private fun isFlashAvailable(cameraId: String): Boolean = try {
+        getSystemService<CameraManager>()
+            ?.getCameraCharacteristics(cameraId)
+            ?.get(CameraCharacteristics.FLASH_INFO_AVAILABLE)
+            ?: false
+    } catch (e: Exception) { false }
 
     private fun addArSceneView(session: Session) {
         val arSceneView = ArSceneView(this)
