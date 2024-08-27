@@ -4,7 +4,7 @@ repositories {
 }
 
 dependencies {
-    implementation("com.beust:klaxon:5.5")
+    implementation("com.beust:klaxon:5.6")
 }
 
 plugins {

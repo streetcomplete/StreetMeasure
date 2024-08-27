@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace = "de.westnordost.streetmeasure"
-    compileSdk = 33
+    compileSdk = 34
 
     signingConfigs {
         create("release") {
@@ -19,7 +19,7 @@ android {
     defaultConfig {
         applicationId = "de.westnordost.streetmeasure"
         minSdk = 24
-        targetSdk = 33
+        targetSdk = 34
         versionCode = 4
         versionName = "1.3"
     }
@@ -48,21 +48,21 @@ android {
 }
 
 dependencies {
-    val kotlinxCoroutinesVersion = "1.6.4"
+    val kotlinxCoroutinesVersion = "1.8.1"
 
     // core android stuff
-    implementation("androidx.core:core-ktx:1.10.1")
-    implementation("androidx.appcompat:appcompat:1.6.1")
-    implementation("com.google.android.material:material:1.9.0")
+    implementation("androidx.core:core-ktx:1.13.1")
+    implementation("androidx.appcompat:appcompat:1.7.0")
+    implementation("com.google.android.material:material:1.12.0")
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
-    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.6.1")
+    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.8.4")
     // coroutines
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:$kotlinxCoroutinesVersion")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:$kotlinxCoroutinesVersion")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-jdk8:$kotlinxCoroutinesVersion")
 
     // measuring distance with AR
-    implementation("com.google.ar:core:1.37.0")
+    implementation("com.google.ar:core:1.45.0")
     implementation("com.google.ar.sceneform:core:1.17.1")
 }
 

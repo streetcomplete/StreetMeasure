@@ -3,12 +3,13 @@ package de.westnordost.streetmeasure
 import android.content.Intent
 import android.os.Bundle
 import android.os.PersistableBundle
-import android.preference.PreferenceManager
 import android.util.Log
 import android.view.HapticFeedbackConstants.VIRTUAL_KEY
 import android.view.ViewGroup.LayoutParams.MATCH_PARENT
 import android.view.WindowManager
 import android.widget.Toast
+import androidx.activity.SystemBarStyle
+import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.edit
 import androidx.core.view.isGone
@@ -56,7 +57,7 @@ class MeasureActivity : AppCompatActivity(), Scene.OnUpdateListener {
     private lateinit var binding: ActivityMeasureBinding
     private var arSceneView: ArSceneView? = null
 
-    private val prefs get() = PreferenceManager.getDefaultSharedPreferences(this)
+    private val prefs get() = getPreferences(Context.MODE_PRIVATE)
 
     private var cursorRenderable: Renderable? = null
     private var pointRenderable: Renderable? = null
@@ -95,14 +96,12 @@ class MeasureActivity : AppCompatActivity(), Scene.OnUpdateListener {
     /* ---------------------------------------- Lifecycle --------------------------------------- */
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        val systemBarStyle = SystemBarStyle.dark(android.graphics.Color.argb(0x80, 0x1b, 0x1b, 0x1b))
+        enableEdgeToEdge(systemBarStyle, systemBarStyle)
         super.onCreate(savedInstanceState)
 
         // no turning off screen automatically while measuring, also no colored navbar
-        window.addFlags(
-            WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON or
-            WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION or
-            WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS
-        )
+        window.addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
         readIntent()
         distance = 0.0
 
