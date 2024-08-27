@@ -12,10 +12,10 @@
     <string name="ar_core_tracking_error_too_steep_angle">"Ángulo demasiado pronunciado, aléjate un poco"</string>
     <string name="ar_core_tracking_error_no_plane_hit">"¡Manténgase más cerca de la flecha pero tenga cuidado con el tráfico!"</string>
     <string name="no_camera_permission_toast">"Sin permiso de cámara"</string>
-    <string name="ar_core_tracking_hint_tap_to_measure">"Toque la pantalla para comenzar a medir"</string>
-    <string name="measure_info_title">"Consiguiendo una precisión óptima"</string>
-    <string name="measure_info_html_description">"&lt;p&gt;ARCore en ocasiones (de forma inicial) presume que el suelo está un poco más bajo o más alto de lo que realmente está. Esto provoca un error de medición que aumenta cuanto más se inclina el teléfono hacia el horizonte.
-&lt;p&gt;Establezca tanto el punto inicial como el final mientras apunta el teléfono directamente hacia abajo (de modo que vea la flecha blanca desde arriba) para evitar por completo este problema en las mediciones horizontales.&lt;/p&gt;
-&lt;p&gt;Para las mediciones verticales, debe comprobar que el punto de inicio no parece moverse en relación con el suelo mirándolo desde diferentes direcciones.&lt;/p&gt;"</string>
-    <string name="privacy_html_arcore">"Esta aplicación se ejecuta en &lt;a href=\"https://play.google.com/store/apps/details?id=com.google.ar.core\"&gt;Google Play Services for AR&lt;/a&gt; (ARCore), que es proporcionado por Google y se rige por la &lt;a href=\"https://policies.google.com/privacy\"&gt;Política de privacidad de Google&lt;/a&gt;."</string>
+    <string name="ar_core_tracking_hint_tap_to_measure">"Toca la pantalla para empezar a medir"</string>
+    <string name="measure_info_title">"Trucos para mejorar la precisión"</string>
+    <string name="measure_info_html_description">"&lt;p&gt;A veces, al lanzar ARCore, el software tiene problemas para encontrar el nivel real del suelo. Esto provoca un error de medición que aumenta cuanto más se inclina el teléfono hacia la línea del horizonte.&lt;/p&gt;
+&lt;p&gt;Para minimizar el problema al medir en horizontal marca tanto el punto inicial como el final con la cámara mirando hacia abajo (y veas la flecha blanca desde arriba).&lt;/p&gt;
+&lt;p&gt;Para medir en vertical asegúrate de que el punto de inicio no se mueva ni siga el suelo, esto se consigue grabando desde varios ángulos para fijar su posición.&lt;/p&gt;"</string>
+    <string name="privacy_html_arcore">"Esta aplicación utiliza los &lt;a href=\"https://play.google.com/store/apps/details?id=com.google.ar.core\"&gt;Serv. de Google Play para RA&lt;/a&gt; (ARCore), hechos por Google y se rigen por su &lt;a href=\"https://policies.google.com/privacy\"&gt;propia política de privacidad&lt;/a&gt;."</string>
 </resources>

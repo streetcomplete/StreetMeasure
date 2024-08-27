@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="about_title_privacy_statement">"Izjava o zasebnosti"</string>
+    <string name="no_camera_permission_warning_title">"Dovoljenje za uporabo kamere"</string>
+    <string name="no_camera_permission_warning">"Potrebujem dovoljenje da lahko merim razdalje z uporabo kamere."</string>
+    <string name="ar_core_error_sdk_too_old">"Ta aplikacija je prestara, prosim da jo poskusiš posodobiti"</string>
+    <string name="ar_core_tracking_error_bad_state">"Nekaj je šlo narobe. Poizkusi ponoviti meritev."</string>
+    <string name="ar_core_tracking_error_insufficient_light">"Tukaj je pretemno"</string>
+    <string name="ar_core_tracking_error_excessive_motion">"Preveč hitrih gibov"</string>
+    <string name="ar_core_tracking_error_insufficient_features">"Tukaj je premalo vizualnih elementov"</string>
+    <string name="ar_core_tracking_error_camera_unavailable">"Kamero uporablja druga aplikacija"</string>
+    <string name="ar_core_tracking_error_too_steep_angle">"Prestrem kot, prosim, stopi nekoliko stran"</string>
+    <string name="ar_core_tracking_error_no_plane_hit">"Ostani bliže puščici, vendar pazi na promet!"</string>
+    <string name="no_camera_permission_toast">"Nimam dovoljenja za uporabo kamere"</string>
+    <string name="ar_core_tracking_hint_tap_to_measure">"Tapni zaslon za začetek merite"</string>
+    <string name="measure_info_title">"Doseganje optimalne natančnosti"</string>
+    <string name="measure_info_html_description">"&lt;p&gt;ARCore včasih (na začetku) predvzame, da so tla nekoliko nižje ali višje kot dejansko so. To lahko privede do merilne napake, ki se povečuje z povečanjem nagiba telefona proti obzorju.&lt;/p&gt;
+&lt;p&gt;Začni in končaj vsako meritev tako, da je kamera usmerjena navpično navzdol (in vidiš puščico iz vrha). Tako se pri horizontalnih meritvah popolnoma izogneš merilni napaki.&lt;/p&gt;
+&lt;p&gt;Za vertikalne meritve namesto tega preveri, da se začetek meritve navidezno ne premika glede na tla, ko nanj pogledaš iz različnih kotov.&lt;/p&gt;"</string>
+    <string name="privacy_html_arcore">"Ta aplikacija obratuje na &lt;a href=\"https://play.google.com/store/apps/details?id=com.google.ar.core\"&gt;Goole Play storitvah za AR&lt;/a&gt; (ARCore), ki jih zagotavlja Google, zanje pa veja &lt;a href=\"https://policies.google.com/privacy\"&gt;Googlova politika zasebnosti&lt;/a&gt;."</string>
+</resources>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="about_title_privacy_statement">"Personvernerklæring"</string>
+    <string name="no_camera_permission_warning_title">"Kameratillatelse"</string>
+    <string name="no_camera_permission_warning">"Tillatelsen er nødvendig for å kunne ta bilder og for å måle avstand med kameraet."</string>
+    <string name="ar_core_error_sdk_too_old">"Appen er utdatert, prøv å oppdatere."</string>
+    <string name="ar_core_tracking_error_bad_state">"Noe gikk galt. Gjør et nytt forsøk på å måle."</string>
+    <string name="ar_core_tracking_error_insufficient_light">"For mørkt her"</string>
+    <string name="ar_core_tracking_error_excessive_motion">"For mye bevegelse"</string>
+    <string name="ar_core_tracking_error_insufficient_features">"Ikke tilstrekkelig visuell variasjon her"</string>
+    <string name="ar_core_tracking_error_camera_unavailable">"Kamera er i bruk av en annen app"</string>
+    <string name="ar_core_tracking_error_too_steep_angle">"For bratt vinkel, gå lenger unna"</string>
+    <string name="ar_core_tracking_error_no_plane_hit">"Vær nærmere pilen, men følg med på trafikken!"</string>
+    <string name="no_camera_permission_toast">"Kameratillatelse mangler"</string>
+    <string name="ar_core_tracking_hint_tap_to_measure">"Trykk på skjermen for å begynne å måle"</string>
+    <string name="measure_info_title">"Oppnå optimal presisjon"</string>
+    <string name="measure_info_html_description">"&lt;p&gt;ARCore vil noen ganger (rett etter oppstart) anta at bakken er litt lavere eller høyere enn den faktisk er.  Dette fører til en målefeil som blir større jo mer du telefonen vris mot horisonten.&lt;/p&gt;
+&lt;p&gt;Ved horisontale målinger bør man sette start- og stoppunktet mens telefonen peker rett nedover (så du ser den hvite pila rett ovenfra) for å unngå denne målefeilen.&lt;/p&gt;
+&lt;p&gt;Ved vertikale målinger må du i stedet kontrollere at startpunktet holder seg i ro på bakken mens du ser på det fra ulike retninger.&lt;/p&gt;"</string>
+    <string name="privacy_html_arcore">"Denne applikasjonen kjører på &lt;a href=\"https://play.google.com/store/apps/details?id=com.google.ar.core\"&gt;Google Play Services for AR&lt;/a&gt; (ARCore), som tilbys av Google og styres av &lt;a href=\"https://policies.google.com/privacy\"&gt;Googles personvernregler&lt;/a&gt;."</string>
+</resources>

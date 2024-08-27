@@ -3,8 +3,8 @@
     <string name="about_title_privacy_statement">"Datenschutzerklärung"</string>
     <string name="no_camera_permission_warning_title">"Kamerazugriff"</string>
     <string name="no_camera_permission_warning">"Die Berechtigung wird benötigt, um Abstände mit der Kamera zu messen."</string>
-    <string name="ar_core_error_sdk_too_old">"Die App ist zu alt, versuche zu aktualisieren."</string>
-    <string name="ar_core_tracking_error_bad_state">"Etwas hat nicht geklappt. Versuche die Messung neu zu starten."</string>
+    <string name="ar_core_error_sdk_too_old">"Die App ist zu alt, versuche, sie zu aktualisieren."</string>
+    <string name="ar_core_tracking_error_bad_state">"Etwas hat nicht geklappt. Versuche, die Messung neu zu starten."</string>
     <string name="ar_core_tracking_error_insufficient_light">"Zu dunkel hier"</string>
     <string name="ar_core_tracking_error_excessive_motion">"Zu viel Bewegung"</string>
     <string name="ar_core_tracking_error_insufficient_features">"Unzureichende visuelle Merkmale hier"</string>
@@ -15,7 +15,7 @@
     <string name="ar_core_tracking_hint_tap_to_measure">"Beginne mit dem Messen per Tipp auf den Bildschirm"</string>
     <string name="measure_info_title">"Optimale Genauigkeit erreichen"</string>
     <string name="measure_info_html_description">"&lt;p&gt;ARCore geht manchmal (anfangs) davon aus, dass der Boden etwas niedriger oder höher ist als in der Realität. Dadurch entsteht ein Messfehler, der umso größer wird, je mehr du das Telefon in Richtung Horizont neigst.&lt;/p&gt;
-&lt;p&gt;Setze den Start- und Endpunkt einfach während das Telefon gerade nach unten zeigt (also so dass der weiße Pfeil von oben zu sehen ist), um dieses Problem bei horizontalen Messungen komplett zu umgehen.&lt;/p&gt;
+&lt;p&gt;Setze den Start- und Endpunkt einfach, während das Telefon gerade nach unten zeigt (sodass der weiße Pfeil von oben zu sehen ist), um dieses Problem bei horizontalen Messungen komplett zu umgehen.&lt;/p&gt;
 &lt;p&gt;Für vertikale Messungen musst du den Startpunkt stattdessen aus verschiedenen Richtungen betrachten, um sicherzustellen, dass er sich nicht relativ zum Boden verschiebt.&lt;/p&gt;"</string>
-    <string name="privacy_html_arcore">"Diese App nutzt die von Google bereitgestellten &lt;a href=\"https://play.google.com/store/apps/details?id=com.google.ar.core\"&gt;Google Play Services for AR&lt;/a&gt; (ARCore) welche den &lt;a href=\"https://policies.google.com/privacy\"&gt;Google-Datenschutzrichtlinien&lt;/a&gt; unterliegen."</string>
+    <string name="privacy_html_arcore">"Diese App nutzt die von Google bereitgestellten &lt;a href=\"https://play.google.com/store/apps/details?id=com.google.ar.core\"&gt;Google Play Services for AR&lt;/a&gt; (ARCore), die den &lt;a href=\"https://policies.google.com/privacy\"&gt;Google-Datenschutzrichtlinien&lt;/a&gt; unterliegen."</string>
 </resources>

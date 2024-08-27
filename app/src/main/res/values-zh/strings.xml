@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="about_title_privacy_statement">"隐私声明"</string>
-    <string name="no_camera_permission_warning_title">"相机许可"</string>
+    <string name="no_camera_permission_warning_title">"相机权限"</string>
     <string name="no_camera_permission_warning">"为了能够用增强现实技术测量距离，该许可是必要的。"</string>
-    <string name="ar_core_error_sdk_too_old">"该应用过于老旧，请尝试升级。"</string>
+    <string name="ar_core_error_sdk_too_old">"应用过于老旧，请尝试升级。"</string>
     <string name="ar_core_tracking_error_bad_state">"出了些问题。请尝试重新启动测量。"</string>
     <string name="ar_core_tracking_error_insufficient_light">"这里太暗了"</string>
-    <string name="ar_core_tracking_error_excessive_motion">"动作太大"</string>
-    <string name="ar_core_tracking_error_insufficient_features">"这里没有足够的视觉特征"</string>
-    <string name="ar_core_tracking_error_camera_unavailable">"相机已被另一个应用程序占用"</string>
+    <string name="ar_core_tracking_error_excessive_motion">"移动过多"</string>
+    <string name="ar_core_tracking_error_insufficient_features">"这里缺少足够的视觉特征"</string>
+    <string name="ar_core_tracking_error_camera_unavailable">"相机已被其它应用所使用"</string>
     <string name="ar_core_tracking_error_too_steep_angle">"角度太陡了，走远一点"</string>
-    <string name="ar_core_tracking_error_no_plane_hit">"靠近箭头处，但要注意交通情况！"</string>
+    <string name="ar_core_tracking_error_no_plane_hit">"靠近箭头处，但要注意车流！"</string>
     <string name="no_camera_permission_toast">"不可进行拍摄"</string>
     <string name="ar_core_tracking_hint_tap_to_measure">"点击屏幕以开始测量"</string>
     <string name="measure_info_title">"实现最佳精确度"</string>

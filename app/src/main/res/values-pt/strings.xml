@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="about_title_privacy_statement">"Declaração de privacidade"</string>
+    <string name="about_title_privacy_statement">"Privacidade"</string>
     <string name="no_camera_permission_warning_title">"Permissão da câmara"</string>
     <string name="no_camera_permission_warning">"A permissão é necessária para medir distâncias com a câmara."</string>
     <string name="ar_core_error_sdk_too_old">"Esta aplicação é demasiado antiga, tente atualizá-la-"</string>

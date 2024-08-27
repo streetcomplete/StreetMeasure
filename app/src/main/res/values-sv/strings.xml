@@ -2,7 +2,7 @@
 <resources>
     <string name="about_title_privacy_statement">"Sekretesspolicy"</string>
     <string name="no_camera_permission_warning_title">"Kamerabehörighet"</string>
-    <string name="no_camera_permission_warning">"Behörigheten krävs för att kunna ta bilder och mäta avstånd med förstärkt verklighet."</string>
+    <string name="no_camera_permission_warning">"Behörigheten krävs för att kunna mäta avstånd med kameran."</string>
     <string name="ar_core_error_sdk_too_old">"Appen är för gammal, försök att uppdatera."</string>
     <string name="ar_core_tracking_error_bad_state">"Något gick fel. Försök att starta om inmätningen."</string>
     <string name="ar_core_tracking_error_insufficient_light">"För mörkt här"</string>

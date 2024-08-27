@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="about_title_privacy_statement">"プライバシーに関する声明"</string>
+    <string name="no_camera_permission_warning_title">"カメラの権限"</string>
+    <string name="no_camera_permission_warning">"カメラで距離を測るにはカメラの権限が必要です。"</string>
+    <string name="ar_core_error_sdk_too_old">"このアプリは古くなっているため、更新してください。"</string>
+    <string name="ar_core_tracking_error_bad_state">"問題が発生しました。測定を再開してみてください。"</string>
+    <string name="ar_core_tracking_error_insufficient_light">"暗すぎます"</string>
+    <string name="ar_core_tracking_error_excessive_motion">"動き過ぎです"</string>
+    <string name="ar_core_tracking_error_insufficient_features">"十分な視覚的特徴がありません"</string>
+    <string name="ar_core_tracking_error_camera_unavailable">"カメラは他のアプリで使われています"</string>
+    <string name="ar_core_tracking_error_too_steep_angle">"角度が急すぎます。少し離れてください"</string>
+    <string name="ar_core_tracking_error_no_plane_hit">"矢印に近づいてください、しかし交通に注意してください!"</string>
+    <string name="no_camera_permission_toast">"カメラの権限がありません"</string>
+    <string name="ar_core_tracking_hint_tap_to_measure">"画面をタップして測定を開始します"</string>
+    <string name="measure_info_title">"最適な精度を実現"</string>
+    <string name="measure_info_html_description">"&lt;p&gt;ARCoreは、(最初は)地面が実際よりも少し低いまたは高いと想定することがあります。これにより、携帯電話を地平線に向かって傾けるほど大きくなる測定誤差が発生します。&lt;/p&gt;
+&lt;p&gt;水平方向の測定でこの問題を完全に回避するために、電話をまっすぐ下に向けながら(上から白い矢印が表示されるように)、それぞれ始点と終点を設定します。&lt;/p&gt;
+&lt;p&gt;垂直測定の場合は、代わりに、開始点をさまざまな方向から見て、地面に対して移動していないように見えることを確認する必要があります。&lt;/p&gt;"</string>
+    <string name="privacy_html_arcore">"このプログラムは、&lt;a href=\"https://play.google.com/store/apps/details?id=com.google.ar.core\"&gt;Google Play Services for ARCore&lt;/a&gt;(ARCore)上で実行されます。ARCoreは、Googleによって提供され、&lt;a href=\"https://policies.google.com/privacy\"&gt;Googleプライバシーポリシー&lt;/a&gt;によって管理されます。"</string>
+</resources>

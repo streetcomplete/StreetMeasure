@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="about_title_privacy_statement">"Declarație de confidențialitate"</string>
+    <string name="no_camera_permission_warning_title">"Permisiune pentru cameră"</string>
+    <string name="no_camera_permission_warning">"Permisiunea este necesară pentru a măsura distanțe folosind camera."</string>
+    <string name="ar_core_error_sdk_too_old">"Aplicația este prea veche, încercați s-o actualizați."</string>
+    <string name="ar_core_tracking_error_bad_state">"Ceva nu a funcționat. Încercați să reporniți măsurarea."</string>
+    <string name="ar_core_tracking_error_insufficient_light">"Prea întuneric"</string>
+    <string name="ar_core_tracking_error_excessive_motion">"Prea multă mișcare"</string>
+    <string name="ar_core_tracking_error_insufficient_features">"Caracteristici vizuale insuficiente"</string>
+    <string name="ar_core_tracking_error_camera_unavailable">"Camera este folosită de altă aplicație"</string>
+    <string name="ar_core_tracking_error_too_steep_angle">"Unghiul este prea mare, îndepărtați-vă puțin"</string>
+    <string name="ar_core_tracking_error_no_plane_hit">"Stați aproape de săgeată, dar fiți atent(ă) la trafic!"</string>
+    <string name="no_camera_permission_toast">"Fără permisiune de cameră"</string>
+    <string name="ar_core_tracking_hint_tap_to_measure">"Atingeți ecranul pentru a începe măsurarea"</string>
+    <string name="measure_info_title">"Se obține precizia optimă"</string>
+    <string name="measure_info_html_description">"&lt;p&gt;ARCore presupune uneori (inițial) că solul este un pic mai jos sau mai sus decât este în realitate. Aceasta introduce o eroare de măsurare ce se mărește pe măsură ce înclinati telefonul spre orizont.&lt;/p&gt;
+&lt;p&gt;Setați punctele de pornire și oprire ținând telefonul orientat paralel cu solul (astfel încât vedeți săgeata albă de deasupra) pentru a evita acest inconvenient când măsurați orizontal.&lt;/p&gt;
+&lt;p&gt;Pentru măsurări pe verticală, trebuie în schimb să verificați că punctul de pornire nu pare să se mute în raport cu solul, uitându-vă la el din diferite direcții.&lt;/p&gt;"</string>
+    <string name="privacy_html_arcore">"Această aplicatie rulează pe &lt;a href=\"https://play.google.com/store/apps/details?id=com.google.ar.core\"&gt;Google Play Services for AR&lt;/a&gt; (ARCore), care este oferit de Google și guvernat de &lt;a href=\"https://policies.google.com/privacy\"&gt;Politica de Confidențialitate Google&lt;/a&gt;."</string>
+</resources>

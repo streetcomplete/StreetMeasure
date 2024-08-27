@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="about_title_privacy_statement">"بيان الخصوصية"</string>
+    <string name="no_camera_permission_warning_title">"إذن استخدام الكاميرا"</string>
+    <string name="no_camera_permission_warning">"لابد من وجود إذن وذلك لالتقاط الصور وقياس المسافات بالكاميرا."</string>
+    <string name="ar_core_error_sdk_too_old">"هذا التطبيق قديم جدًا ، حاول التحديث."</string>
+    <string name="ar_core_tracking_error_bad_state">"هناك خطأ ما، حاول إعادة القياس."</string>
+    <string name="ar_core_tracking_error_insufficient_light">"ظلام هنا"</string>
+    <string name="ar_core_tracking_error_excessive_motion">"الكثير من الحركة"</string>
+    <string name="ar_core_tracking_error_insufficient_features">"العناصر المرئية غير كافية هنا"</string>
+    <string name="ar_core_tracking_error_camera_unavailable">"يوجد تطبيق آخر يستخدم الكاميرا"</string>
+    <string name="ar_core_tracking_error_too_steep_angle">"شديد الانحدار للزاوية ، ابتعد قليلاً"</string>
+    <string name="ar_core_tracking_error_no_plane_hit">"ابق أقرب إلى السهم ولكن احترس من حركة المرور!"</string>
+    <string name="no_camera_permission_toast">"لا يوجد إذن باستخدام الكاميرا"</string>
+    <string name="ar_core_tracking_hint_tap_to_measure">"اضغط على الشاشة لبدء القياس"</string>
+    <string name="measure_info_title">"تحقيق الدقة الأمثل"</string>
+    <string name="measure_info_html_description">"&lt;p&gt;يفترض ARCore أحيانًا (في البداية) أن الأرض أخفض أو أعلى قليلًا مما هي عليه في الواقع. مما يؤدي إلى حدوث خطأ في القياس يزداد كلما قمت بإمالة هاتفك نحو الأفق.&lt;/p&gt;
+&lt;p&gt;اضبط كلًا من نقطتي البداية والنهاية أثناء توجيه الهاتف مباشرةً إلى أسفل (بحيث ترى السهم الأبيض من أعلى) لتفادي هذه المشكلة تمامًا مع القياسات الأفقية.&lt;/p&gt;
+&lt;p&gt;بالنسبة للقياسات الرأسية، فستحتاج بدلًا من ذلك إلى التحقق من أن نقطة البداية لا تبدو بأنها تتحرك بالنسبة إلى الأرض عن طريق النظر إليها من اتجاهات مختلفة.&lt;/p&gt;"</string>
+    <string name="privacy_html_arcore">"هذا التطبيق يعمل على &lt;a href=\"https://play.google.com/store/apps/details?id=com.google.ar.core\"&gt;خدمات Google Play للواقع المعزز&lt;/a&gt; (ARCore)، والتي تقدم من قبل قوقل وتخضع لـ&lt;a href=\"https://policies.google.com/privacy\"&gt;سياسات Google للخصوصية&lt;/a&gt;."</string>
+</resources>

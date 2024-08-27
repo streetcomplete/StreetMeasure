@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="about_title_privacy_statement">"ประกาศความเป็นส่วนตัว"</string>
+    <string name="no_camera_permission_warning_title">"สิทธิ์เข้าถึงกล้อง"</string>
+    <string name="no_camera_permission_warning">"สิทธิ์เข้าถึงกล้องจำเป็นต่อการถ่ายรูป และการวัดระยะด้วยกล้อง"</string>
+    <string name="ar_core_error_sdk_too_old">"อัพเดตแอพเถอะ เวอร์ชันเก่าแล้วนะ"</string>
+    <string name="ar_core_tracking_error_bad_state">"เกิดความผิดปกติ ลองวัดใหม่อีกครั้ง"</string>
+    <string name="ar_core_tracking_error_insufficient_light">"มืดเกินไป"</string>
+    <string name="ar_core_tracking_error_excessive_motion">"มีวัตถุเคลื่อนที่มากไป"</string>
+    <string name="ar_core_tracking_error_insufficient_features">"มีทัศนวัตถุไม่พอ"</string>
+    <string name="ar_core_tracking_error_camera_unavailable">"มีแอพอื่นกำลังใช้กล้องอยู่"</string>
+    <string name="ar_core_tracking_error_too_steep_angle">"มุมชันเกินไป ถอยห่างอีกนิด"</string>
+    <string name="ar_core_tracking_error_no_plane_hit">"ขยับเข้าใกล้ลูกศรอีกนิด แต่ระวังรถด้วย!"</string>
+    <string name="no_camera_permission_toast">"ไม่มีสิทธิ์เข้าถึงกล้อง"</string>
+    <string name="ar_core_tracking_hint_tap_to_measure">"แตะหน้าจอเพื่อเริ่มวัด"</string>
+    <string name="measure_info_title">"บรรลุความแม่นยำที่ดีที่สุด"</string>
+    <string name="measure_info_html_description">"&lt;p&gt;บางครั้ง ARCore (ในตอนแรก) จะสันนิษฐานว่าพื้นต่ำกว่าหรือสูงกว่าที่เป็นจริงเล็กน้อย ซึ่งทำให้เกิดข้อผิดพลาดในการวัดที่มากขึ้นเมื่อคุณเอียงโทรศัพท์ไปทางเส้นขอบฟ้ามากขึ้น&lt;/p&gt;
+&lt;p&gt;ตั้งค่าจุดเริ่มต้นและจุดสิ้นสุดแต่ละจุดในขณะที่ชี้โทรศัพท์ลงไปตรง ๆ (เพื่อให้คุณเห็นลูกศรสีขาวจากด้านบน) เพื่อหลีกเลี่ยงปัญหานี้อย่างสมบูรณ์สำหรับการวัดในแนวนอน&lt;/p&gt;
+&lt;p&gt;สำหรับการวัดในแนวตั้ง คุณต้องตรวจสอบแทนว่าจุดเริ่มต้นไม่เคลื่อนที่สัมพันธ์กับพื้น โดยดูจากทิศทางที่ต่างกัน&lt;/p&gt;"</string>
+    <string name="privacy_html_arcore">"แอปพลิเคชันนี้ทำงานบน &lt;a href=\"https://play.google.com/store/apps/details?id=com.google.ar.core\"&gt;บริการ Google Play สำหรับ AR&lt;/a&gt; (ARCore) ซึ่งให้บริการโดย Google และอยู่ภายใต้&lt;a href=\"https://policies.google.com/privacy\"&gt;นโยบายความเป็นส่วนตัวของ Google&lt;/a&gt;"</string>
+</resources>

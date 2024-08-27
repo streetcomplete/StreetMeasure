@@ -2,7 +2,7 @@
 <resources>
     <string name="about_title_privacy_statement">"Tietosuojalausunto"</string>
     <string name="no_camera_permission_warning_title">"Oikeudet kameraan"</string>
-    <string name="no_camera_permission_warning">"Oikeudet tarvitaan kuvien ottamiseen ja etäisyyksien mittaamiseen kameran avulla."</string>
+    <string name="no_camera_permission_warning">"Oikeudet tarvitaan etäisyyksien mittaamiseen kameran avulla."</string>
     <string name="ar_core_error_sdk_too_old">"Sovellusversio on vanha, päivitä sovellus."</string>
     <string name="ar_core_tracking_error_bad_state">"Jokin meni pieleen. Kokeile käynnistää mittaus uudelleen."</string>
     <string name="ar_core_tracking_error_insufficient_light">"Liian pimeää"</string>

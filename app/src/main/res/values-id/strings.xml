@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="about_title_privacy_statement">"Pernyataan privasi"</string>
+    <string name="no_camera_permission_warning_title">"Izin kamera"</string>
+    <string name="no_camera_permission_warning">"Izin kamera dibutuhkan untuk mengambil gambar dan untuk mengukur jarak dengan kamera."</string>
+    <string name="ar_core_error_sdk_too_old">"Aplikasi ini terlalu lama, coba perbarui."</string>
+    <string name="ar_core_tracking_error_bad_state">"Terjadi kesalahan. Coba mengulang kembali pengukuran."</string>
+    <string name="ar_core_tracking_error_insufficient_light">"Terlalu gelap di sini"</string>
+    <string name="ar_core_tracking_error_excessive_motion">"Terlalu banyak gerakan"</string>
+    <string name="ar_core_tracking_error_insufficient_features">"Fitur visual tidak cukup di sini"</string>
+    <string name="ar_core_tracking_error_camera_unavailable">"Kamera digunakan oleh aplikasi lain"</string>
+    <string name="ar_core_tracking_error_too_steep_angle">"Sudutnya terlalu curam, menjauhlah sedikit"</string>
+    <string name="ar_core_tracking_error_no_plane_hit">"Keep closer to the arrow but watch out for traffic!"</string>
+    <string name="no_camera_permission_toast">"Tidak ada izin kamera"</string>
+    <string name="ar_core_tracking_hint_tap_to_measure">"Ketuk layar untuk mulai mengukur"</string>
+    <string name="measure_info_title">"Mencapai presisi optimal"</string>
+    <string name="measure_info_html_description">"&lt;p&gt;ARCore terkadang (awalnya) menganggap tanah sedikit lebih rendah atau lebih tinggi dari yang sebenarnya. Hal ini menyebabkan kesalahan pengukuran yang semakin besar jika Anda semakin memiringkan ponsel ke arah cakrawala.&lt;/p&gt;
+&lt;p&gt;Tetapkan titik awal dan akhir sambil mengarahkan ponsel lurus ke bawah (sehingga Anda melihat panah putih dari atas) untuk sepenuhnya menghindari masalah ini pada pengukuran horizontal.&lt;/p&gt;
+&lt;p&gt;Untuk pengukuran vertikal, Anda perlu memeriksa bahwa titik awal tampaknya tidak bergerak terhadap tanah dengan melihatnya dari arah yang berbeda.&lt;/p&gt;"</string>
+    <string name="privacy_html_arcore">"Aplikasi ini berjalan dengan &lt;a href=\"https://play.google.com/store/apps/details?id=com.google.ar.core\"&gt;Google Play Services for AR&lt;/a&gt; (ARCore), yang disediakan oleh Google dan diatur oleh &lt;a href=\"https://policies.google.com/privacy\"&gt;Kebijakan Privasi Google&lt;/a&gt;."</string>
+</resources>
