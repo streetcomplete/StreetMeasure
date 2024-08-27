@@ -19,3 +19,9 @@
 # If you keep the line number information, uncomment this to
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
+
+-dontwarn com.google.ar.sceneform.animation.AnimationEngine
+-dontwarn com.google.ar.sceneform.animation.AnimationLibraryLoader
+-dontwarn com.google.ar.sceneform.assets.Loader
+-dontwarn com.google.ar.sceneform.assets.ModelData
+-dontwarn com.google.devtools.build.android.desugar.runtime.ThrowableExtension
