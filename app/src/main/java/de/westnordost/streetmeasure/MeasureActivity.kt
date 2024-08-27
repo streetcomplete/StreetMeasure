@@ -401,7 +401,7 @@ class MeasureActivity : AppCompatActivity(), Scene.OnUpdateListener {
         val arSceneView = ArSceneView(this)
         arSceneView.planeRenderer.isEnabled = false
         binding.arSceneViewContainer.addView(arSceneView, MATCH_PARENT, MATCH_PARENT)
-        arSceneView.session = session
+        arSceneView.setupSession(session)
         arSceneView.scene.addOnUpdateListener(this)
         arSceneView.setOnClickListener { onTapPlane() }
         this.arSceneView = arSceneView

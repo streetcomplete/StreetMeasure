@@ -63,8 +63,7 @@ dependencies {
 
     // measuring distance with AR
     implementation("com.google.ar:core:1.45.0")
-    //implementation("com.google.ar.sceneform:core:1.17.1")
-    implementation("com.gorisse.thomas.sceneform:sceneform:1.23.0") // maintained until ~2023
+    implementation("com.google.ar.sceneform:core:1.17.1")
 }
 
 tasks.register<UpdateAppTranslationsTask>("updateTranslations") {
