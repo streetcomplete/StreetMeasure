@@ -4,6 +4,13 @@ A tool to measure (street) widths via Google's ARCore.
 
 [<img src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png" alt="Get it on Google Play" height="80">](https://play.google.com/store/apps/details?id=de.westnordost.streetmeasure)
 
+## Screenshots
+
+<p align="center">
+  <img src="assets/screenshot1.jpg" alt="Screenshot 1" width="45%">
+  <img src="assets/screenshot2.jpg" alt="Screenshot 2" width="45%">
+</p>
+
 ## History
 
 This used to be a component within [StreetComplete](https://github.com/streetcomplete/StreetComplete/) but has been outsourced into an own app due to license issues:
@@ -68,12 +75,7 @@ In any case, do not forget to add `<package android:name="de.westnordost.streetm
 Android manifest. In Android 11 onwards, it must be declared which packages the app should be
 capable of communicating with, otherwise the app may not find the app at all.
 
-## Screenshots
-
-![Screenshot 1](assets/screenshot1.jpg)
-
-![Screenshot 2](assets/screenshot2.jpg)
-
 ## License
 
 This software is released under the terms of the [Apache License, Version 2.0](https://www.apache.org/licenses/LICENSE-2.0).
+
