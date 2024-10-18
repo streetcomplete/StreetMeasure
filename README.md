@@ -2,6 +2,8 @@
 
 A tool to measure (street) widths via Google's ARCore.
 
+[<img src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png" alt="Get it on Google Play" height="80">](https://play.google.com/store/apps/details?id=de.westnordost.streetmeasure)
+
 ## History
 
 This used to be a component within [StreetComplete](https://github.com/streetcomplete/StreetComplete/) but has been outsourced into an own app due to license issues:
@@ -15,7 +17,7 @@ For this reason, the app is also not available on F-Droid and never will be but 
 
 ### Requesting a measure result
 
-You can call this activity for result to let the user make a measurement and return its result to 
+You can call this activity for result to let the user make a measurement and return its result to
 your app. See the [Android documentation](https://developer.android.com/training/basics/intents/result)
 on how to do this generally.
 
@@ -24,7 +26,7 @@ A type-safe `ActivityResultContract` interface is available at [MeasureContract.
 Alternatively, consult the [documentation in the code](https://github.com/streetcomplete/StreetMeasure/blob/master/app/src/main/java/de/westnordost/streetmeasure/MeasureActivity.kt#L577-L633) which raw parameters are available and what is returned in the result
 `Intent` if you want to do it the old way with [`Activity.startActivityForResult`](https://developer.android.com/reference/android/app/Activity#startActivityForResult(android.content.Intent,%20int)).
 
-In either case, do not forget to cover the likely case that the measure app is not installed yet, 
+In either case, do not forget to cover the likely case that the measure app is not installed yet,
 i.e. catch the `ActivityNotFoundException` and for example forward the user to the Play Store:
 
 ```kotlin
@@ -54,17 +56,23 @@ private fun PackageManager.isPackageInstalled(packageName: String): Boolean =
 ```
 
 - it is not available in Android versions below 7.0 and requires OpenGL ES 3.1
-- if not already installed, the measuring app is only available on Google Play store (not on 
+- if not already installed, the measuring app is only available on Google Play store (not on
   F-Droid). So if neither of the two is installed, no point in showing it to the user as an option. It is of course possible to load the app from GitHub and also to sideload ARCore (="Google Play Services for AR") from some other more or less trustworthy source, but this is nothing the user could be led through automatically in the UI.
 
 If it returns true, it may still be the case that [his device is not supported](https://developers.google.com/ar/devices)
 but this is something you cannot check for at this point. The list of supported devices is not really publicly available directly from Google as a CSV and in any case is updated all the time, so getting the CSV one time from a third party and then not updating it is bound to break for new devices being added to the list.
 
 In any case, do not forget to add `<package android:name="de.westnordost.streetmeasure"/>` and
-`<package android:name="com.android.vending"/>` to the 
-[`<queries>`](https://developer.android.com/guide/topics/manifest/queries-element) block in your 
+`<package android:name="com.android.vending"/>` to the
+[`<queries>`](https://developer.android.com/guide/topics/manifest/queries-element) block in your
 Android manifest. In Android 11 onwards, it must be declared which packages the app should be
 capable of communicating with, otherwise the app may not find the app at all.
+
+## Screenshots
+
+![Screenshot 1](assets/screenshot1.jpg)
+
+![Screenshot 2](assets/screenshot2.jpg)
 
 ## License
 
