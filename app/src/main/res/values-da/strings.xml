@@ -2,7 +2,7 @@
 <resources>
     <string name="about_title_privacy_statement">"Privatlivspolitik"</string>
     <string name="no_camera_permission_warning_title">"Kameratilladelse"</string>
-    <string name="no_camera_permission_warning">"Tilladelsen er nødvendig for at kunne tage billeder og måle afstande med kameraet."</string>
+    <string name="no_camera_permission_warning">"Tilladelsen er nødvendig for at kunne måle afstande med kameraet."</string>
     <string name="ar_core_error_sdk_too_old">"Denne app er for gammel. Prøv at opdatere."</string>
     <string name="ar_core_tracking_error_bad_state">"Noget gik galt. Prøv at genstarte opmålingen."</string>
     <string name="ar_core_tracking_error_insufficient_light">"For mørkt her"</string>

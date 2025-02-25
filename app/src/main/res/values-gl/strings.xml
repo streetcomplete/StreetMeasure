@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="about_title_privacy_statement">"Privacidade"</string>
+    <string name="no_camera_permission_warning_title">"Permiso da cámara"</string>
+    <string name="no_camera_permission_warning">"Requírese o permiso para poder medir as distancias mediante a cámara."</string>
+    <string name="ar_core_error_sdk_too_old">"Esta aplicación é demasiado antiga, proba a actualizala."</string>
+    <string name="ar_core_tracking_error_bad_state">"Algo foi mal. Proba a volver a iniciar a medición."</string>
+    <string name="ar_core_tracking_error_insufficient_light">"Está moi escuro"</string>
+    <string name="ar_core_tracking_error_excessive_motion">"Hai demasiado movemento"</string>
+    <string name="ar_core_tracking_error_insufficient_features">"Non hai suficientes elementos visuais"</string>
+    <string name="ar_core_tracking_error_camera_unavailable">"A cámara estaa usando outra aplicación"</string>
+    <string name="ar_core_tracking_error_too_steep_angle">"Ángulo demasiado agudo, retrocede un pouco"</string>
+    <string name="ar_core_tracking_error_no_plane_hit">"Mantente máis preto da frecha, mais ten coidado co tráfico!"</string>
+    <string name="no_camera_permission_toast">"Sen permiso da cámara"</string>
+    <string name="ar_core_tracking_hint_tap_to_measure">"Toca na pantalla para comezar a medir"</string>
+    <string name="measure_info_title">"Conseguir a mellor precisión"</string>
+    <string name="measure_info_html_description">"&lt;p&gt;Hai veces que ARCore supón (inicialmente) que o chan está máis alto ou baixo do que realmente está. Isto introduce un erro de medición, que se fai maior cando máis inclinado teñas o móbil cara o horizonte.&lt;/p&gt;
+&lt;p&gt;Establece o punto de inicio e o de final apuntando o móbil xusto cara abaixo (de maneira que vexas a frecha desde arriba); deste xeito evitarás por completo este problema nas medicións horizontais.&lt;/p&gt;
+&lt;p&gt;Para as medicións verticais, o que tes que facer é comprobar que o punto de inicio non se move en relación ao chan cando o miras desde diferentes direccións.&lt;/p&gt;"</string>
+    <string name="privacy_html_arcore">"Esta aplicación utiliza os &lt;a href=\"https://play.google.com/store/apps/details?id=com.google.ar.core\"&gt;Servizos Google Play para RA&lt;/a&gt; (ARCore), proporcionados por Google e suxeitos á &lt;a href=\"https://policies.google.com/privacy\"&gt;política de privacidade de Google&lt;/a&gt;."</string>
+</resources>

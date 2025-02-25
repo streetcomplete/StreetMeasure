@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="about_title_privacy_statement">"Privaatsus"</string>
+    <string name="no_camera_permission_warning_title">"Õigused kaamera kasutamiseks"</string>
+    <string name="no_camera_permission_warning">"See õigus on vajalik vahemaa mõõtmiseks kaameraga."</string>
+    <string name="ar_core_error_sdk_too_old">"Selle rakenduse praegune versioon on liiga vana, palun proovi teda uuendada."</string>
+    <string name="ar_core_tracking_error_bad_state">"Midagi läks valesti. Proovi mõõtmist uuesti alustada."</string>
+    <string name="ar_core_tracking_error_insufficient_light">"Siin on liiga pime"</string>
+    <string name="ar_core_tracking_error_excessive_motion">"Siin on liiga palju liikumist"</string>
+    <string name="ar_core_tracking_error_insufficient_features">"Siin pole piisavalt visuaalselt tuvastatavaid omadusi"</string>
+    <string name="ar_core_tracking_error_camera_unavailable">"Mõni muu rakendus kasutab kaamerat"</string>
+    <string name="ar_core_tracking_error_too_steep_angle">"Liiga järsk nurk, palun astu pisut eemale"</string>
+    <string name="ar_core_tracking_error_no_plane_hit">"Hoia noolele lähemal ja vaata, et sa liiklusele ette ei jää!"</string>
+    <string name="no_camera_permission_toast">"Pole õigusi kaamera kasutamiseks"</string>
+    <string name="ar_core_tracking_hint_tap_to_measure">"Mõõtmise alustamiseks puuduta ekraani"</string>
+    <string name="measure_info_title">"Saavutame optimaalset täpsust"</string>
+    <string name="measure_info_html_description">"&lt;p&gt;ARCore mõnikord (algselt) eeldab, et maapind on kõrgemal või madalamal, kui ta tegelikult on. Sellega võib tekkida mõõteviga, mis võib veelgi suureneda, kui kallutad telefoni silmapiiri suunas.&lt;/p&gt;
+&lt;p&gt;Horisontaalse mõõtmise viga saad vältida sel viisil, et sätid alg- ja lõppunkti kaadrisse nii, et suunad telefoni otse alla (nii et näed ülalt valget noolt).&lt;/p&gt;
+&lt;p&gt;Püstloodis mõõtmiste puhul kontrolli, et vaadates eri suundadest algpunkt ei tunduks liikuma maapinna suhtes.&lt;/p&gt;"</string>
+    <string name="privacy_html_arcore">"See rakendus kasutab tööks &lt;a href=\"https://play.google.com/store/apps/details?id=com.google.ar.core\"&gt;teenust Google Play Services for AR&lt;/a&gt; (ARCore), mille teenusepakkujaks on Google ja mis juhendub &lt;a href=\"https://policies.google.com/privacy\"&gt;Google'i privaatsuspoliitikast&lt;/a&gt;."</string>
+</resources>

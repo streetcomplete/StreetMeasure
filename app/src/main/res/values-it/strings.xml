@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="about_title_privacy_statement">"Informativa sulla privacy"</string>
+    <string name="about_title_privacy_statement">"Privacy"</string>
     <string name="no_camera_permission_warning_title">"Permessi della fotocamera"</string>
     <string name="no_camera_permission_warning">"I permessi sono necessari per poter misurare le distanze con la realtà aumentata."</string>
     <string name="ar_core_error_sdk_too_old">"Questa app è di una versione troppo vecchia, prova ad aggiornarla."</string>

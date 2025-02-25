@@ -11,7 +11,7 @@
     <string name="ar_core_tracking_error_camera_unavailable">"Kameru koristi druga aplikacija"</string>
     <string name="ar_core_tracking_error_too_steep_angle">"Previše strm kut, malo se odmaknite"</string>
     <string name="ar_core_tracking_error_no_plane_hit">"Držite se bliže strelici, ali pripazite na promet!"</string>
-    <string name="no_camera_permission_toast">"Nema dopuštenja za kameru"</string>
+    <string name="no_camera_permission_toast">"Nedostaje dopuštenje za kameru"</string>
     <string name="ar_core_tracking_hint_tap_to_measure">"Dotaknite ekran kako biste započeli mjerenje"</string>
     <string name="measure_info_title">"Postizanje optimalne preciznosti"</string>
     <string name="measure_info_html_description">"&lt;p&gt;ARCore ponekad (inicijalno) pretpostavlja da je tlo malo niže ili više nego što zapravo jest. Ovo uvodi mjernu pogrešku koja raste čim više telefon usmjeravate prema horizontu.&lt;/p&gt;

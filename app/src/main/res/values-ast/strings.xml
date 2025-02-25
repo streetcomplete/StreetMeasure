@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="about_title_privacy_statement">"Declaración de privacidá"</string>
+    <string name="no_camera_permission_warning_title">"Permisu de cámara"</string>
+    <string name="no_camera_permission_warning">"Precísase permisu pa poder facer fotos y midir distancies cola cámara."</string>
+    <string name="ar_core_error_sdk_too_old">"Esta app ye demasiao antigua, intenta actualizala."</string>
+    <string name="ar_core_tracking_error_bad_state">"Dalgo salió mal. Intente reaniciar la midición."</string>
+    <string name="ar_core_tracking_error_insufficient_light">"Demasiao escuro"</string>
+    <string name="ar_core_tracking_error_excessive_motion">"Demasiao movimientu"</string>
+    <string name="ar_core_tracking_error_insufficient_features">"Característiques visuales insuficientes"</string>
+    <string name="ar_core_tracking_error_camera_unavailable">"Hai otra aplicación usando la cámara"</string>
+    <string name="ar_core_tracking_error_too_steep_angle">"Ángulu demasiáu pronunciáu, apártate un poco"</string>
+    <string name="ar_core_tracking_error_no_plane_hit">"Has tar más cerca de la flecha, ¡pero cuidáu col tráficu!"</string>
+    <string name="no_camera_permission_toast">"Ensin permisu de cámara"</string>
+    <string name="ar_core_tracking_hint_tap_to_measure">"Toca la pantalla pa empezar a midir"</string>
+    <string name="measure_info_title">"Llogrando una precisión óptima"</string>
+    <string name="measure_info_html_description">"&lt;p&gt;ARCore a vegaes (de mano) entiende que'l suelu ta un poco más baxo o más alto de lo que realmente ta. Esto provoca un error de midición qu'aumenta cuanto más s'inclina'l teléfonu escontra l'horizonte.
+&lt;p&gt;Has d'afitar tanto'l puntu d'aniciu como'l final mientres apuntes el teléfonu directo p'abaxo (de manera que veas la flecha blanca dende arriba) pa evitar del too esti problema nes midiciones horizontales.&lt;/p&gt;
+&lt;p&gt;Pa les midiciones verticales, has de comprobar que'l puntu d'aniciu nun paez movese en rellación col suelu mirándolu dende diferentes direcciones.&lt;/p&gt;"</string>
+    <string name="privacy_html_arcore">"Esta aplicación execútase en &lt;a href=\"https://play.google.com/store/apps/details?id=com.google.ar.core\"&gt;Google Play Services for AR&lt;/a&gt; (ARCore), que proporciona Google y mándase de la &lt;a href=\"https://policies.google.com/privacy\"&gt;Política de privacidá de Google&lt;/a&gt;."</string>
+</resources>
