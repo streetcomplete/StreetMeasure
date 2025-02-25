@@ -46,6 +46,11 @@ android {
     kotlinOptions {
         jvmTarget = "21"
     }
+
+    // for reproducible builds - see https://github.com/streetcomplete/StreetMeasure/issues/15
+    packaging {
+        jniLibs.keepDebugSymbols.add("**/*.so")
+    }
 }
 
 dependencies {
