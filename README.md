@@ -3,6 +3,8 @@
 A tool to measure (street) widths via Google's ARCore.
 
 [<img src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png" alt="Get it on Google Play" height="80">](https://play.google.com/store/apps/details?id=de.westnordost.streetmeasure)
+[<img src="https://gitlab.com/IzzyOnDroid/repo/-/raw/master/assets/IzzyOnDroid.png" alt="Get it on IzzyOnDroid" height="80">](https://apt.izzysoft.de/fdroid/index/apk/de.westnordost.streetmeasure)
+[<img src=".github/Github-Apk-badge.png" alt="Get APK from GitHub" height="80">](https://github.com/streetcomplete/StreetMeasure/releases/)
 
 ## Screenshots
 
