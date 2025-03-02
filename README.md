@@ -20,7 +20,7 @@ It turned out that Google's [ARCore library is not licensed under the Apache lic
 
 This means that this library cannot be used by any GPL licensed project, hence, I took the AR measuring stuff and released it in an own app under a permissive license which does not have this constraint.
 
-For this reason, the app is also not available on F-Droid and never will be but only on Google Play. However, you can <a href="https://github.com/streetcomplete/StreetMeasure/releases/">download the APK here from Github</a> as well.
+For this reason, the app is not available in the main F-Droid repository and never will.
 
 ## Usage
 
