@@ -68,7 +68,7 @@ dependencies {
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-jdk8:$kotlinxCoroutinesVersion")
 
     // measuring distance with AR
-    implementation("com.google.ar:core:1.50.0")
+    implementation("com.google.ar:core:1.51.0")
     implementation("com.google.ar.sceneform:core:1.17.1")
 }
 
